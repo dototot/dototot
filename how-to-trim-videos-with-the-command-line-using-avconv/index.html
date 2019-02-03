@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" id="arve" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>How to Trim Videos with the Command Line Using AVConv • Dototot</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="https://dototot.com/apple-touch-icon.png"><meta name="description" content="How to Trim Videos with the Command Line Using AVConv and other digital media material tutorials."><link rel="publisher" href="http://www.google.com/+Dotototdotcom"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="How to Trim Videos with the Command Line Using AVConv • Dototot"><meta property="og:description" content="How to Trim Videos with the Command Line Using AVConv and other digital media material tutorials."><meta property="og:url" content="https://dototot.com/how-to-trim-videos-with-the-command-line-using-avconv/"><meta property="og:site_name" content="Dototot"><meta property="article:publisher" content="https://www.facebook.com/dototot"><meta property="article:author" content="https://www.facebook.com/jayarnielsen"><meta property="article:tag" content="avconv"><meta property="article:tag" content="Command Line"><meta property="article:section" content="Video Production"><meta property="article:published_time" content="2013-08-16T18:32:53-07:00"><meta property="article:modified_time" content="2016-02-02T20:04:02-07:00"><meta property="og:updated_time" content="2016-02-02T20:04:02-07:00"><meta property="fb:admins" content="100006882456857"><meta property="og:image" content="https://dototot.com/app/uploads/2013/08/trimming.jpg"><meta property="og:image:width" content="1000"><meta property="og:image:height" content="581"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="How to Trim Videos with the Command Line Using AVConv and other digital media material tutorials."><meta name="twitter:title" content="How to Trim Videos with the Command Line Using AVConv • Dototot"><meta name="twitter:site" content="@dotototdotcom"><meta name="twitter:image" content="https://dototot.com/app/uploads/2013/08/trimming.jpg"><meta name="twitter:creator" content="@jayarnielsen"><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/PLACEHOLDER.wpsho\/","name":"Dototot","potentialAction":{"@type":"SearchAction","target":"http:\/\/PLACEHOLDER.wpsho\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/PLACEHOLDER.wpsho\/how-to-trim-videos-with-the-command-line-using-avconv\/","sameAs":["https:\/\/www.facebook.com\/dototot","https:\/\/instagram.com\/dototot\/","https:\/\/www.linkedin.com\/company\/dototot","http:\/\/www.google.com\/+Dotototdotcom","https:\/\/www.youtube.com\/c\/dotototdotcom","https:\/\/www.pinterest.com\/dototot\/","https:\/\/twitter.com\/dotototdotcom"],"@id":"#organization","name":"Dototot","logo":"http:\/\/PLACEHOLDER.wpsho\/app\/uploads\/2015\/06\/dototot.png"}</script><link rel="dns-prefetch" href="//s.w.org"><script>
+		/**
+  * based on domready (c) Dustin Diaz 2014 - License MIT
+  * https://github.com/ded/domready
+  */
+advanced_ads_ready = ( function() {
+  var fns = [], listener
+    , doc = typeof document === 'object' && document
+    , hack = doc && doc.documentElement.doScroll
+    , domContentLoaded = 'DOMContentLoaded'
+    , loaded = doc && (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState)
+
+  if (!loaded && doc){
+    listener = function () {
+	  doc.removeEventListener(domContentLoaded, listener)
+	  window.removeEventListener( "load", listener );
+	  loaded = 1
+	  while (listener = fns.shift()) listener()
+	}
+	  
+	doc.addEventListener(domContentLoaded, listener )
+	window.addEventListener( 'load', listener );
+  }
+
+  return function (fn) {
+    loaded ? setTimeout(fn, 0) : fns.push(fn)
+  }
+} )();
+</script><link rel="stylesheet" id="yarppWidgetCss-css" href="https://dototot.com/app/plugins/yet-another-related-posts-plugin/style/widget.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-css" href="https://dototot.com/wp/wp-includes/css/dist/block-library/style.css" type="text/css" media="all"><link rel="stylesheet" id="open-sans-font-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C400italic%2C700italic&ver=1.0" type="text/css" media="all"><link rel="stylesheet" id="fontawesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0" type="text/css" media="all"><link rel="stylesheet" id="slick-css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css?ver=1.5.8" type="text/css" media="all"><link rel="stylesheet" id="highlight-css" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/styles/default.min.css?ver=9.14.2" type="text/css" media="screen"><link rel="stylesheet" id="app-css" href="https://dototot.com/app/themes/dototot/css/app.css" type="text/css" media="all"><link rel="stylesheet" id="print-css" href="https://dototot.com/app/themes/dototot/css/print.css" type="text/css" media="print"><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?ver=2.1.4"></script><script type="text/javascript">
+/* <![CDATA[ */
+var gadwpUAEventsData = {"options":{"event_tracking":"1","event_downloads":"zip|mp3|mpeg|pdf|doc*|ppt*|xls*|jpeg|png|gif|tiff","event_bouncerate":"1","aff_tracking":0,"event_affiliates":"\/out\/","hash_tracking":0,"root_domain":"dototot.test","event_timeout":100,"event_precision":0,"event_formsubmit":0,"ga_pagescrolldepth_tracking":0}};
+/* ]]> */
+</script><script type="text/javascript" src="https://dototot.com/app/plugins/google-analytics-dashboard-for-wp/front/js/tracking-analytics-events.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/modernizr.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js?ver=1"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47778824-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script></head><body class="post-template-default single single-post postid-924 single-format-standard">
+	
+	<div class="contain-to-grid hide-for-small-only">
+		<nav class="top-bar" data-topbar><ul class="title-area"><li class="name">
+					<h1>
+						<a href="http://dototot.com/">
+							<img src="https://dototot.com/app/themes/dototot/img/logo.svg">
+							Dototot - <span class="subtitle">Engaging education</span>
+						</a>
+					</h1>
+				</li>
+			</ul><section class="top-bar-section"><ul class="left"><li class="divider">
+					<li><a href="https://dototot.com/about-us/">About Us</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/services/">Services</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/our-work/">Our Work</a></li>
+					<li class="divider">
+					<li class="has-dropdown">
+						<a href="https://dototot.com/blog/">Blog & Tutorials</a>
+						<ul class="dropdown"><li><label>Categories</label></li>
+								<li class="cat-item cat-item-38"><a href="https://dototot.com/animation/">Animation</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://dototot.com/business-marketing/">Business & Marketing</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://dototot.com/design/">Design</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://dototot.com/et-cetera/">Et cetera</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://dototot.com/news/">News</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://dototot.com/programming/">Programming</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://dototot.com/puppets/">Puppets</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://dototot.com/video-production/">Video Production</a>
+</li>
+						</ul></li>
+					<li class="divider">
+				</ul></section></nav></div>
+	<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap">
+		
+		<nav class="tab-bar show-for-small-only"><div class="left-small">
+				<a href="#mobile-nav" role="button" aria-expanded="true" aria-controls="mobile-nav" class="left-off-canvas-toggle menu-icon">
+					<span></span>
+				</a>
+			</div>
+			<div class="right tab-bar-section">
+				<h1 class="title">
+					<a href="http://dototot.com/">
+						Dototot -
+						Engaging education					</a>
+				</h1>
+			</div>
+		</nav><nav class="left-off-canvas-menu" id="mobile-nav"><ul class="off-canvas-list"><li><label>Look Around</label></li>
+			</ul><ul id="menu-navigation" class="off-canvas-list"><li id="menu-item-2487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2487"><a href="https://dototot.com/">Home</a></li>
+<li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2483"><a href="https://dototot.com/blog/">Blog</a></li>
+<li id="menu-item-2484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://dototot.com/services/">Our Services</a></li>
+<li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2485"><a href="https://dototot.com/our-work/">Our Work</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://dototot.com/about-us/">About Us</a></li>
+</ul><ul class="off-canvas-list"><li><label>Connect with us!</label></li>
+				<li>
+					<a class="rss" href="https://dototot.com/feed/" rel="nofollow" target="_blank">
+						<i class="fa fa-rss fa-fw"></i> RSS Feed
+					</a>
+				</li>
+				<li>
+					<a class="twitter" href="https://twitter.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-twitter fa-fw"></i> Twitter
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="http://www.youtube.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-youtube fa-fw"></i> YouTube
+					</a>
+				</li>
+				<li>
+					<a class="facebook" href="http://www.facebook.com/dototot" rel="nofollow" target="_blank">
+						<i class="fa fa-facebook fa-fw"></i> Facebook
+					</a>
+				</li>
+				<li><label>Do a something search</label></li>
+			</ul><form class="searchform" action="http://PLACEHOLDER.wpsho/" method="get">
+	<div class="row collapse">
+		<div class="medium-12 columns">
+			<input type="search" name="s" value="" placeholder="Search Dototot…"></div>
+		<div class="medium-4 columns">
+			<button type="submit" title="Submit Search Query" class="button alert expand">
+				<i class="fa fa-search fa-fw"></i>
+			</button>
+		</div>
+	</div>
+</form>
+		</nav><a class="exit-off-canvas"></a>
+		
+		<div class="row" id="main-wrap">
+			<div id="main" class="medium-11 large-12 columns">
+
+	<article class="post-924 post type-post status-publish format-standard has-post-thumbnail hentry category-video-production tag-avconv tag-command-line"><header class="post-header"><img width="955" height="540" src="https://dototot.com/app/uploads/2013/08/trimming-955x540.jpg" class="attachment-post-header size-post-header wp-post-image" alt="How to Trim Videos with the Command Line Using AVConv" title="How to Trim Videos with the Command Line Using AVConv"><h1><span><span>How to Trim Videos with the Command Line Using AVConv</span></span></h1>
+	</header><div class="content-box">
+			
+				<p>Lets say you have a video that is too long and you want to cut out a piece from the middle without having to bother with importing the video into an editor, making some cuts, then exporting again. Not only is this annoying, you’ll be unnecessarily transcoding your video! There’s an easy way to trim videos from the command line using avconv. Simply use this command:</p>
+<pre class="wrap:true lang:sh decode:true">avconv -i [input file] -ss [start time] -t [duration] -codec copy [output file]</pre>
+<p>Let me give you an example of how we can use this. Suppose we have a video that has about 42 seconds of unwanted footage at the beginning.</p>
+<p><img class="aligncenter size-full wp-image-943" alt="41seconds" src="https://dototot.com/app/uploads/2013/08/41seconds.jpg" width="660" height="377" srcset="https://dototot.com/app/uploads/2013/08/41seconds.jpg 660w, https://dototot.com/app/uploads/2013/08/41seconds-460x263.jpg 460w" sizes="(max-width: 660px) 100vw, 660px"></p>
+<p>We’d need to set the <strong>-ss</strong> parameter to 00:00:42. This parameter accepts a time code value formatted as hours:minutes:seconds. It tells avconv that we only want to keep the video after 42 seconds in. Easy, right?</p>
+<p>But wait, I forgot to mention that we have about 12 seconds of footage that we don’t want at the end of the video. We can use the <strong>-t</strong> parameter to specify the duration of video to keep. This is a bit tricky because <strong>-t</strong> is not the out point, it is the total duration of the output clip. Meaning what once was 00:00:42 for my input file is now 00:00:00 for the output file. So if I want to trim 12 seconds off of the end, I have to do a teeny tiny bit of math. An easy way to figure this out is to subtract your <strong>-ss</strong> start time from the outpoint you want to use and enter that as the <strong>-t</strong> parameter. So lets say the outpoint we want to use in the source video is 00:04:08. If we subtract 00:00:42 from 00:04:08 we get 00:03:26.</p>
+<p>The final avconv command would look like this:</p>
+<pre class="wrap:true lang:sh decode:true ">avconv -i input.mkv -ss 00:00:42 -t 00:03:26 -codec copy output.mkv</pre>
+<p><span style="line-height: 1.71429em;">Now we have a trimmed video that is three minutes and twenty six seconds long. Just as we anticipated.</span></p>
+<p><img class="aligncenter size-full wp-image-944" alt="alltrimmed" src="https://dototot.com/app/uploads/2013/08/alltrimmed.jpg" width="660" height="377" srcset="https://dototot.com/app/uploads/2013/08/alltrimmed.jpg 660w, https://dototot.com/app/uploads/2013/08/alltrimmed-460x263.jpg 460w" sizes="(max-width: 660px) 100vw, 660px"></p>
+<p>Now I must confess something… This is how trimming a video with avconv would work <em>in theory</em>. In practice, I had to make a small change. For whatever reason, the audio was not copying over to my output video nicely, so I had to transcode it. If that happens to you, you can easily fix it by using this command:</p>
+<pre class="wrap:true lang:sh decode:true">avconv -i input.mkv -ss 00:00:42 -t 00:03:26 -c:v copy -c:a flac output.mkv</pre>
+<p>With this command we have told avconv to copy only the video codec from the source file and transcode the audio to flac. Flac is a lossless codec, so I don’t feel too bad about transcoding it.</p>
+
+													<div class="post-tags">
+						<p>
+																								<a class="label info" href="https://dototot.com/video-production/">
+										<i class="fa fa-tag fa-fw"></i>
+										Video Production									</a>
+																																							<a class="label info" href="https://dototot.com/tag/avconv/">
+										<i class="fa fa-tag fa-fw"></i>
+										avconv									</a>
+																	<a class="label info" href="https://dototot.com/tag/command-line/">
+										<i class="fa fa-tag fa-fw"></i>
+										Command Line									</a>
+																					</p>
+					</div>
+									</div>
+
+		<div class="section-title">Hands-on Computer Science</div>
+<div class="content-box">
+<div class="row">
+	<div class="large-8 columns text-center">
+		<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-bsXqCi4zp-s" style="max-width:915px;" itemscope itemtype="http://schema.org/VideoObject"><div class="arve-embed-container" style="padding-bottom:56.250000%"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="arve-iframe fitvidsignore" frameborder="0" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/bsXqCi4zp-s?iv_load_policy=3&modestbranding=1&rel=0&autohide=1&playsinline=1&autoplay=0" width="480" height="270"></iframe></div></div>	</div>
+	<div class="large-8 columns">
+		<p>Learn computer science, programming, and web development with us, your educational and entertaining super friends.</p>
+		<a href="http://www.youtube.com/subscription_center?add_user=helloworldprogram" class="button large primary expand no-bottom-margin">
+			<i class="fa fa-youtube fa-fw"></i>			
+			Subscribe to our YouTube Channel
+		</a>
+	</div>
+</div>
+</div>
+				<div class="section-title">About the Author</div>
+		<div class="content-box">
+			<div class="row">
+				<div class="medium-6 large-4 columns">
+					<p class="hidden-for-small-only no-bottom-margin"><a href="https://dototot.com/author/jay/">
+						<img src="http://1.gravatar.com/avatar/dbf86d4bb96f2df787e051bb74ab9732?s=250&d=mm&r=g" width="250" height="250" alt="" class="avatar avatar-250 wp-user-avatar wp-user-avatar-250 photo avatar-default"></a></p>
+				</div>
+				<div class="medium-10 large-12 columns">
+					<p>
+						<em>How to Trim Videos with the Command Line Using AVConv</em>
+						was posted by <a href="https://dototot.com/author/jay/" title="Posts by Jay" rel="author">Jay</a>						on <time datetime="2013-08-16" itemprop="datePublished">August 16th, 2013</time>.
+						I am one half of the creative force behind Dototot. I'm a writer, web programmer, composer, designer, and video editor with an interest in all things digital media.					</p>
+					<p>
+						Discuss this article in the
+						<a href="#discussion"><i class="fa fa-comments"></i> Comments</a> below, or
+												<a class="twitter-share" target="_blank" rel="nofollow" href="https://twitter.com/share?text=How+to+Trim+Videos+with+the+Command+Line+Using+AVConv&url=http%3A%2F%2Fgoo.gl%2F4uQCGd&via=dotototdotcom">
+							<i class="fa fa-twitter-square"></i>
+							tweet
+						</a>
+						and
+												<a class="facebook-share" target="_blank" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fdototot.test%2Fhow-to-trim-videos-with-the-command-line-using-avconv%2F">
+							<i class="fa fa-facebook-square"></i>
+							share
+						</a>
+						it with your friends.
+					</p>
+				</div>
+			</div>
+		</div>
+
+					<div class="section-title">Recommended for you</div>
+			<article id="recommended" class="content-box"><div class="yarpp-related">
+	<ul class="small-block-grid-2 large-block-grid-4 recommended-posts"><li>
+					<a href="https://dototot.com/how-to-export-high-quality-master-from-lightworks/" title="How to Export Best Quality Master Video From Lightworks">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2013/07/exporting-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How to Export Best Quality Master Video From Lightworks" title="How to Export Best Quality Master Video From Lightworks"><span>How to Export Best Quality…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/convert-videos-for-import-into-lightworks-with-avconv/" title="Convert Videos For Import Into Lightworks With Avconv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2013/08/lwksconvert-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Convert Videos For Import Into Lightworks With Avconv" title="Convert Videos For Import Into Lightworks With Avconv"><span>Convert Videos For Import Into…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/compile-stop-motion-animation-image-sequence-avconv/" title="How to Compile a Stop Motion Animation Image Sequence with avconv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/05/animating2-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How to Compile a Stop Motion Animation Image Sequence with avconv" title="How to Compile a Stop Motion Animation Image Sequence with avconv"><span>How to Compile a Stop…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/how-to-extract-images-from-a-video-with-avconv-on-linux/" title="How To Extract Images from a Video with avconv on Linux">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2015/05/20150517_howto_avconv_extract_video_gremlin-1-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How To Extract Images from a Video with avconv on Linux" title="How To Extract Images from a Video with avconv on Linux"><span>How To Extract Images from…</span>
+					</a>
+				</li>
+						</ul></div>
+			</article></article></div>
+							<aside id="sidebar" class="medium-5 large-4 columns"><div id="logo" class="hide-for-small-only">
+	<a href="http://dototot.com/" rel="nofollow">
+		<img src="https://dototot.com/app/themes/dototot/img/logo.svg"></a>
+	<p>
+		<em>Inspiring and empowering learners to produce
+		professional media with free and open source software.</em>
+		<small>(<a href="https://dototot.com/about-us/">more about us…</a>)</small>
+	</p>
+	<hr></div>
+<ul class="small-block-grid-1"><li id="advads_ad_widget-2" class="widget dotot-widget"><figure class="text-center"><a href="https://gumroad.com/l/fox-puppet">
+		<img src="https://dototot.com/app/uploads/2015/08/fox_puppet_cover_small.jpg"></a>
+</figure><p>
+	<strong>Penguin puppet pattern</strong> -
+	Craft your own fleece and foam character with our complete, ready-to-print fox puppet pattern.
+</p>
+<a href="https://gumroad.com/l/fox-puppet" class="button expand alert">
+	<i class="fa fa-shopping-cart fa-fw"></i>
+	Get It Now!
+</a></li>	</ul></aside></div>
+		<footer id="footer" class="row hide-for-small-only"><div class="small-8 small-offset-4 columns text-center">
+                <p>Dototot is a creative media company and think tank specializing in educational material. The contents of this website are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a></p>
+			</div>
+		</footer></div></div>
+
+	<link rel="stylesheet" id="advanced-responsive-video-embedder-css" href="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.css" type="text/css" media="all"><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/fastclick.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/placeholder.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/foundation.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js?ver=1.5.8"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/js/app.js"></script><script type="text/javascript" src="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.js"></script></body></html>

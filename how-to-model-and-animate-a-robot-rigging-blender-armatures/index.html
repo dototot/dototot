@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" id="arve" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>How to Model and Animate a Robot: Rigging Blender Armatures • Dototot</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="https://dototot.com/apple-touch-icon.png"><meta name="description" content="Bring your robot to life! Learn how to use bones to rig an armature. In Blender, rigging is the process of connecting an armature to a mesh to make it move."><link rel="publisher" href="http://www.google.com/+Dotototdotcom"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="How to Model and Animate a Robot: Rigging Blender Armatures • Dototot"><meta property="og:description" content="Bring your robot to life! Learn how to use bones to rig an armature. In Blender, rigging is the process of connecting an armature to a mesh to make it move."><meta property="og:url" content="https://dototot.com/how-to-model-and-animate-a-robot-rigging-blender-armatures/"><meta property="og:site_name" content="Dototot"><meta property="article:publisher" content="https://www.facebook.com/dototot"><meta property="article:section" content="Animation"><meta property="article:published_time" content="2016-09-08T16:26:31-07:00"><meta property="article:modified_time" content="2016-09-15T14:33:35-07:00"><meta property="og:updated_time" content="2016-09-15T14:33:35-07:00"><meta property="fb:admins" content="100006882456857"><meta property="og:image" content="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-1-1.jpg"><meta property="og:image:width" content="960"><meta property="og:image:height" content="510"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="Bring your robot to life! Learn how to use bones to rig an armature. In Blender, rigging is the process of connecting an armature to a mesh to make it move."><meta name="twitter:title" content="How to Model and Animate a Robot: Rigging Blender Armatures • Dototot"><meta name="twitter:site" content="@dotototdotcom"><meta name="twitter:image" content="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-1-1.jpg"><meta name="twitter:creator" content="@jarednielsen"><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/PLACEHOLDER.wpsho\/","name":"Dototot","potentialAction":{"@type":"SearchAction","target":"http:\/\/PLACEHOLDER.wpsho\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/PLACEHOLDER.wpsho\/how-to-model-and-animate-a-robot-rigging-blender-armatures\/","sameAs":["https:\/\/www.facebook.com\/dototot","https:\/\/instagram.com\/dototot\/","https:\/\/www.linkedin.com\/company\/dototot","http:\/\/www.google.com\/+Dotototdotcom","https:\/\/www.youtube.com\/c\/dotototdotcom","https:\/\/www.pinterest.com\/dototot\/","https:\/\/twitter.com\/dotototdotcom"],"@id":"#organization","name":"Dototot","logo":"http:\/\/PLACEHOLDER.wpsho\/app\/uploads\/2015\/06\/dototot.png"}</script><link rel="dns-prefetch" href="//s.w.org"><script>
+		/**
+  * based on domready (c) Dustin Diaz 2014 - License MIT
+  * https://github.com/ded/domready
+  */
+advanced_ads_ready = ( function() {
+  var fns = [], listener
+    , doc = typeof document === 'object' && document
+    , hack = doc && doc.documentElement.doScroll
+    , domContentLoaded = 'DOMContentLoaded'
+    , loaded = doc && (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState)
+
+  if (!loaded && doc){
+    listener = function () {
+	  doc.removeEventListener(domContentLoaded, listener)
+	  window.removeEventListener( "load", listener );
+	  loaded = 1
+	  while (listener = fns.shift()) listener()
+	}
+	  
+	doc.addEventListener(domContentLoaded, listener )
+	window.addEventListener( 'load', listener );
+  }
+
+  return function (fn) {
+    loaded ? setTimeout(fn, 0) : fns.push(fn)
+  }
+} )();
+</script><link rel="stylesheet" id="yarppWidgetCss-css" href="https://dototot.com/app/plugins/yet-another-related-posts-plugin/style/widget.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-css" href="https://dototot.com/wp/wp-includes/css/dist/block-library/style.css" type="text/css" media="all"><link rel="stylesheet" id="open-sans-font-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C400italic%2C700italic&ver=1.0" type="text/css" media="all"><link rel="stylesheet" id="fontawesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0" type="text/css" media="all"><link rel="stylesheet" id="slick-css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css?ver=1.5.8" type="text/css" media="all"><link rel="stylesheet" id="highlight-css" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/styles/default.min.css?ver=9.14.2" type="text/css" media="screen"><link rel="stylesheet" id="app-css" href="https://dototot.com/app/themes/dototot/css/app.css" type="text/css" media="all"><link rel="stylesheet" id="print-css" href="https://dototot.com/app/themes/dototot/css/print.css" type="text/css" media="print"><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?ver=2.1.4"></script><script type="text/javascript">
+/* <![CDATA[ */
+var gadwpUAEventsData = {"options":{"event_tracking":"1","event_downloads":"zip|mp3|mpeg|pdf|doc*|ppt*|xls*|jpeg|png|gif|tiff","event_bouncerate":"1","aff_tracking":0,"event_affiliates":"\/out\/","hash_tracking":0,"root_domain":"dototot.test","event_timeout":100,"event_precision":0,"event_formsubmit":0,"ga_pagescrolldepth_tracking":0}};
+/* ]]> */
+</script><script type="text/javascript" src="https://dototot.com/app/plugins/google-analytics-dashboard-for-wp/front/js/tracking-analytics-events.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/modernizr.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js?ver=1"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47778824-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script></head><body class="post-template-default single single-post postid-3094 single-format-standard">
+	
+	<div class="contain-to-grid hide-for-small-only">
+		<nav class="top-bar" data-topbar><ul class="title-area"><li class="name">
+					<h1>
+						<a href="http://dototot.com/">
+							<img src="https://dototot.com/app/themes/dototot/img/logo.svg">
+							Dototot - <span class="subtitle">Engaging education</span>
+						</a>
+					</h1>
+				</li>
+			</ul><section class="top-bar-section"><ul class="left"><li class="divider">
+					<li><a href="https://dototot.com/about-us/">About Us</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/services/">Services</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/our-work/">Our Work</a></li>
+					<li class="divider">
+					<li class="has-dropdown">
+						<a href="https://dototot.com/blog/">Blog & Tutorials</a>
+						<ul class="dropdown"><li><label>Categories</label></li>
+								<li class="cat-item cat-item-38"><a href="https://dototot.com/animation/">Animation</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://dototot.com/business-marketing/">Business & Marketing</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://dototot.com/design/">Design</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://dototot.com/et-cetera/">Et cetera</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://dototot.com/news/">News</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://dototot.com/programming/">Programming</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://dototot.com/puppets/">Puppets</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://dototot.com/video-production/">Video Production</a>
+</li>
+						</ul></li>
+					<li class="divider">
+				</ul></section></nav></div>
+	<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap">
+		
+		<nav class="tab-bar show-for-small-only"><div class="left-small">
+				<a href="#mobile-nav" role="button" aria-expanded="true" aria-controls="mobile-nav" class="left-off-canvas-toggle menu-icon">
+					<span></span>
+				</a>
+			</div>
+			<div class="right tab-bar-section">
+				<h1 class="title">
+					<a href="http://dototot.com/">
+						Dototot -
+						Engaging education					</a>
+				</h1>
+			</div>
+		</nav><nav class="left-off-canvas-menu" id="mobile-nav"><ul class="off-canvas-list"><li><label>Look Around</label></li>
+			</ul><ul id="menu-navigation" class="off-canvas-list"><li id="menu-item-2487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2487"><a href="https://dototot.com/">Home</a></li>
+<li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2483"><a href="https://dototot.com/blog/">Blog</a></li>
+<li id="menu-item-2484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://dototot.com/services/">Our Services</a></li>
+<li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2485"><a href="https://dototot.com/our-work/">Our Work</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://dototot.com/about-us/">About Us</a></li>
+</ul><ul class="off-canvas-list"><li><label>Connect with us!</label></li>
+				<li>
+					<a class="rss" href="https://dototot.com/feed/" rel="nofollow" target="_blank">
+						<i class="fa fa-rss fa-fw"></i> RSS Feed
+					</a>
+				</li>
+				<li>
+					<a class="twitter" href="https://twitter.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-twitter fa-fw"></i> Twitter
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="http://www.youtube.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-youtube fa-fw"></i> YouTube
+					</a>
+				</li>
+				<li>
+					<a class="facebook" href="http://www.facebook.com/dototot" rel="nofollow" target="_blank">
+						<i class="fa fa-facebook fa-fw"></i> Facebook
+					</a>
+				</li>
+				<li><label>Do a something search</label></li>
+			</ul><form class="searchform" action="http://PLACEHOLDER.wpsho/" method="get">
+	<div class="row collapse">
+		<div class="medium-12 columns">
+			<input type="search" name="s" value="" placeholder="Search Dototot…"></div>
+		<div class="medium-4 columns">
+			<button type="submit" title="Submit Search Query" class="button alert expand">
+				<i class="fa fa-search fa-fw"></i>
+			</button>
+		</div>
+	</div>
+</form>
+		</nav><a class="exit-off-canvas"></a>
+		
+		<div class="row" id="main-wrap">
+			<div id="main" class="medium-11 large-12 columns">
+
+	<article class="post-3094 post type-post status-publish format-standard has-post-thumbnail hentry category-animation"><header class="post-header"><img width="955" height="510" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-1-1-955x510.jpg" class="attachment-post-header size-post-header wp-post-image" alt="How to Model and Animate a Robot: Rigging Blender Armatures" title="How to Model and Animate a Robot: Rigging Blender Armatures"><h1><span><span>How to Model and Animate a Robot: Rigging Blender Armatures</span></span></h1>
+	</header><div class="content-box">
+			
+				<p>Let’s bring our robot to life! We will do so with bones. Yes, bones. And bones are what make up armatures. In Blender, rigging is the process of connecting an armature to a mesh to make it move. In this tutorial, you will be rigging Blender armatures to animate your robot.</p>
+<p>If you’re just joining us, you will want to start with <a href="https://dototot.com/beginner-blender-tutorial-how-to-model-and-animate-a-robot/">Part 1, Beginner Blender Tutorial: How to Model & Animate a Robot.</a></p>
+<h2>Rigging Blender Armatures</h2>
+<p><img class="aligncenter size-full wp-image-3057" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_147-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_147-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_147-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_147-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_147-920x489.png 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Before we create our first bone, make sure the 3D cursor is at the center of the 3D View. <b>SHIFT + S</b>  and select Cursor to Center.</p>
+<p><img class="aligncenter size-full wp-image-3058" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_149-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_149-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_149-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_149-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_149-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Now <b>Z</b> to wireframe and add a bone with <b>SHIFT + A </b>and select Armature, Single Bone.</p>
+<p><img class="aligncenter size-full wp-image-3059" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_151-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_151-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_151-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_151-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_151-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p><strong>TAB</strong>. Select the bone tab in Properties panel.</p>
+<p><img class="aligncenter size-full wp-image-3060" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_152-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_152-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_152-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_152-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_152-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Rename ‘Bone’ to ‘Spine’.</p>
+<p><img class="aligncenter size-full wp-image-3061" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_153-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_153-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_153-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_153-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_153-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p><b>TAB</b> to Edit Mode. Use <b>RMB </b>to select the bottom of ‘Spine’.</p>
+<p><img class="aligncenter size-full wp-image-3062" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_154-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_154-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_154-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_154-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_154-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Press <b>G</b> to Grab and <b>Z</b> to move it only on the Z-axis, then enter -1, and press <b>ENTER.</b></p>
+<p><img class="aligncenter size-full wp-image-3063" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_155-2.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_155-2.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_155-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_155-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_155-2-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Now select the top, or head, of  ‘Spine’.</p>
+<p><img class="aligncenter size-full wp-image-3064" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_156-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_156-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_156-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_156-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_156-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Grab with <b>G</b>, constrain to <b>Z</b>,  and move it down -.35. Press <b>ENTER</b>.</p>
+<p><img class="aligncenter size-full wp-image-3065" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_157-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_157-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_157-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_157-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_157-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>With the top of ‘Spine’ still selected, press <b>E</b> to extrude a new bone, and <b>Z</b> to constrain it to the Z-axis, then enter 1.35 and press <b>ENTER.</b></p>
+<p><img class="aligncenter size-full wp-image-3066" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_158-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_158-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_158-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_158-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_158-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Rename the new bone to ‘Neck’.</p>
+<p><img class="aligncenter size-full wp-image-3067" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_159-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_159-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_159-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_159-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_159-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select the top of ‘Spine’ again.</p>
+<p><img class="aligncenter size-full wp-image-3068" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_160-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_160-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_160-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_160-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_160-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Press <b>E</b> to Extrude a new bone and <b>X</b> to constrain it to the X-axis. Enter .9 and press <b>ENTER</b>. Rename this bone ‘Shoulder.L’.</p>
+<p><img class="aligncenter size-full wp-image-3069" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_161-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_161-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_161-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_161-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_161-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select the head of ‘Shoulder.L’ and Extrude it 2 Blender units on the X-axis. <b>E</b>, <b>X</b>, 2, <b>ENTER.</b></p>
+<p><img class="aligncenter size-full wp-image-3070" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_162-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_162-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_162-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_162-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_162-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Rename this bone to ‘Arm’.</p>
+<p><img class="aligncenter size-full wp-image-3071" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_163-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_163-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_163-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_163-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_163-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select ‘Arm’ bone and in the Tools panel click Subdivide three times.</p>
+<p><img class="aligncenter size-full wp-image-3072" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_165-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_165-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_165-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_165-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_165-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>This will divide ‘Arm’ into eight bones. Don’t worry about renaming them.</p>
+<p><img class="aligncenter size-full wp-image-3073" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_166-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_166-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_166-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_166-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_166-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select the last bone, and rename it ‘Hand.L’.</p>
+<p><img class="aligncenter size-full wp-image-3074" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_167-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_167-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_167-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_167-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_167-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Zoom in with the scroll wheel if you need and select the head of ‘Hand.L’.</p>
+<p><img class="aligncenter size-full wp-image-3075" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_169-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_169-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_169-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_169-1-768x408.jpg 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_169-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Extrude a new bone, <b>E</b>, <b>X</b>, .5, <b>ENTER</b>. Rename the new bone ‘HandIK.L’.</p>
+<p><img class="aligncenter size-full wp-image-3076" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_170-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_170-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_170-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_170-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_170-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select HandIK.L and in the Properties panel, under the Bone tab, under Relations, click the ‘x’ next to its name in the Parent field.</p>
+<p><img class="aligncenter size-full wp-image-3077" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_173-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_173-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_173-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_173-1-768x408.jpg 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_173-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Grab HandIK.L with <b>G</b> and move it on the X-axis .25: <b>X</b>, .25, <b>ENTER</b>.</p>
+<p><img class="aligncenter size-full wp-image-3078" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_175-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_175-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_175-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_175-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_175-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p><b>TAB</b> to Object Mode and from the Object Interaction Toggle, select Pose Mode.</p>
+<p><img class="aligncenter size-full wp-image-3079" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_177-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_177-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_177-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_177-1-768x408.jpg 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_177-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select Hand.L, and in the Properties panel, select the Bone Constraints tab.</p>
+<p><img class="aligncenter size-full wp-image-3080" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_178-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_178-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_178-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_178-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_178-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Click the big ‘Add Bone Constraint’ button and select ‘Add Tracking: Inverse Kinematics’.</p>
+<p><img class="aligncenter size-full wp-image-3081" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_181-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_181-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_181-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_181-1-768x408.jpg 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_181-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>In the IK panel, in the Target field, select ‘Armature’ and in the Bone field select ‘HandIK.L’. Set the Chain Length to 8 (because we made eight bones when we subdivide ‘Arm’ and we need the chain to connect back to the body).</p>
+<p><img class="aligncenter size-full wp-image-3082" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_183-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_183-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_183-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_183-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_183-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select HandIK.L and grab it with <b>G</b> to move it around and see that it works properly. Press <b>ALT + G</b> to reset the pose.</p>
+<p><img class="aligncenter size-full wp-image-3083" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_185-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_185-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_185-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_185-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_185-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>In the Properties panel, select the Armature Object Data tab. Under Display, select B-Bone.</p>
+<p><img class="aligncenter size-full wp-image-3084" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_187-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_187-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_187-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_187-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_187-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Press <b>A </b>until the entire Armature is selected, then press <b>CTRL + ALT +S</b> to scale the bones and enter .5, then press <b>ENTER</b>.</p>
+<p><img class="aligncenter size-full wp-image-3085" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_189-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_189-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_189-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_189-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_189-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Select ‘HandIK.L’ and scale it up with <b>CTRL + ALT + S</b> and enter 4. Then press <b>ENTER</b>.</p>
+<p><img class="aligncenter size-full wp-image-3086" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_190-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_190-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_190-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_190-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_190-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p><b>TAB </b>into Edit Mode. Press <b>SHIFT + S</b> and select Cursor to Center. Be sure the Pivot Point toggle is set to 3D cursor. Holding <b>SHIFT</b>, select Shoulder, Arms, Hand and IK bones. Don’t select Spine or Neck.</p>
+<p><img class="aligncenter size-full wp-image-3087" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_191-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_191-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_191-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_191-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_191-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Press <b>SHIFT + D</b> to Duplicate, then press <b>ENTER</b>. Now we’re going to invite our duplicated arm by scaling it 100% backwards on the X-axis. Press <b>S</b>, <b>X</b>, enter -1 and press <b>ENTER</b>.</p>
+<p><img class="aligncenter size-full wp-image-3088" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_192-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_192-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_192-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_192-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_192-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Under Armature, select Flip Names</p>
+<p><img class="aligncenter size-full wp-image-3089" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_193-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_193-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_193-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_193-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_193-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>In Object Mode, select the Robot mesh.</p>
+<p><img class="aligncenter size-full wp-image-3090" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_194-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_194-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_194-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_194-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_194-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Holding <b>SHIFT</b>, select any bone.</p>
+<p><img class="aligncenter size-full wp-image-3091" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_195-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_195-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_195-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_195-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_195-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Press <b>CTRL + P</b> and select Armature Deform, With Automatic Weights.</p>
+<p><img class="aligncenter size-full wp-image-3092" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-2.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-2.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-460x244.png 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_196-2-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>Grab the HandIKs and move them around to see that everything works properly. Then press <b>ALT + G </b>to return them to their original position.</p>
+<p><img class="aligncenter size-full wp-image-3093" src="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_197-1.jpg" alt="How to Model and Animate a Robot: Rigging Blender Armatures" width="960" height="510" srcset="https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_197-1.jpg 960w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_197-1-460x244.jpg 460w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_197-768x408.png 768w, https://dototot.com/app/uploads/2016/09/dototot_blender_model_animate_robot_197-1-920x489.jpg 920w" sizes="(max-width: 960px) 100vw, 960px"></p>
+<p>In the next chapter, we will <a href="https://dototot.com/how-to-model-and-animate-a-robot-key-frame-a-blender-animation/">pose and key frame a Blender animation our robot to audio an track</a>. Sound good?</p>
+<p> </p>
+
+													<div class="post-tags">
+						<p>
+																								<a class="label info" href="https://dototot.com/animation/">
+										<i class="fa fa-tag fa-fw"></i>
+										Animation									</a>
+																												</p>
+					</div>
+									</div>
+
+		<div class="section-title">Hands-on Computer Science</div>
+<div class="content-box">
+<div class="row">
+	<div class="large-8 columns text-center">
+		<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-bsXqCi4zp-s" style="max-width:915px;" itemscope itemtype="http://schema.org/VideoObject"><div class="arve-embed-container" style="padding-bottom:56.250000%"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="arve-iframe fitvidsignore" frameborder="0" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/bsXqCi4zp-s?iv_load_policy=3&modestbranding=1&rel=0&autohide=1&playsinline=1&autoplay=0" width="480" height="270"></iframe></div></div>	</div>
+	<div class="large-8 columns">
+		<p>Learn computer science, programming, and web development with us, your educational and entertaining super friends.</p>
+		<a href="http://www.youtube.com/subscription_center?add_user=helloworldprogram" class="button large primary expand no-bottom-margin">
+			<i class="fa fa-youtube fa-fw"></i>			
+			Subscribe to our YouTube Channel
+		</a>
+	</div>
+</div>
+</div>
+				<div class="section-title">About the Author</div>
+		<div class="content-box">
+			<div class="row">
+				<div class="medium-6 large-4 columns">
+					<p class="hidden-for-small-only no-bottom-margin"><a href="https://dototot.com/author/jared/">
+						<img src="https://dototot.com/app/uploads/2015/04/jared_avatar_square-300x300.jpg" width="250" height="250" alt="Jared" class="avatar avatar-250 wp-user-avatar wp-user-avatar-250 alignnone photo"></a></p>
+				</div>
+				<div class="medium-10 large-12 columns">
+					<p>
+						<em>How to Model and Animate a Robot: Rigging Blender Armatures</em>
+						was posted by <a href="https://dototot.com/author/jared/" title="Posts by Jared" rel="author">Jared</a>						on <time datetime="2016-09-08" itemprop="datePublished">September 8th, 2016</time>.
+						Jared is one half of the creative force behind Dototot. In addition to writing scripts and tutorials, he draws and animates both the digital and the analog.					</p>
+					<p>
+						Discuss this article in the
+						<a href="#discussion"><i class="fa fa-comments"></i> Comments</a> below, or
+												<a class="twitter-share" target="_blank" rel="nofollow" href="https://twitter.com/share?text=How+to+Model+and+Animate+a+Robot%3A+Rigging+Blender+Armatures&url=https%3A%2F%2Fgoo.gl%2F6MIH74&via=dotototdotcom">
+							<i class="fa fa-twitter-square"></i>
+							tweet
+						</a>
+						and
+												<a class="facebook-share" target="_blank" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fdototot.test%2Fhow-to-model-and-animate-a-robot-rigging-blender-armatures%2F">
+							<i class="fa fa-facebook-square"></i>
+							share
+						</a>
+						it with your friends.
+					</p>
+				</div>
+			</div>
+		</div>
+
+					<div class="section-title">Recommended for you</div>
+			<article id="recommended" class="content-box"><div class="yarpp-related">
+	<ul class="small-block-grid-2 large-block-grid-4 recommended-posts"><li>
+					<a href="https://dototot.com/create-stop-motion-animations-linux-entangle-avconv/" title="Create Stop Motion Animations on Linux with Entangle and avconv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/05/animating-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Create Stop Motion Animations on Linux with Entangle and avconv" title="Create Stop Motion Animations on Linux with Entangle and avconv"><span>Create Stop Motion Animations on…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/compile-stop-motion-animation-image-sequence-avconv/" title="How to Compile a Stop Motion Animation Image Sequence with avconv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/05/animating2-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How to Compile a Stop Motion Animation Image Sequence with avconv" title="How to Compile a Stop Motion Animation Image Sequence with avconv"><span>How to Compile a Stop…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/best-blender-short-films/" title="The Best Blender Short Films">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2016/02/best_blender_short_films-1-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of The Best Blender Short Films" title="The Best Blender Short Films"><span>The Best Blender Short Films</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/free-and-open-source-software-for-creatives/" title="Free and Open Source Software for Creatives">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2016/03/01-id-shoot-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Free and Open Source Software for Creatives" title="Free and Open Source Software for Creatives"><span>Free and Open Source Software…</span>
+					</a>
+				</li>
+						</ul></div>
+			</article></article></div>
+							<aside id="sidebar" class="medium-5 large-4 columns"><div id="logo" class="hide-for-small-only">
+	<a href="http://dototot.com/" rel="nofollow">
+		<img src="https://dototot.com/app/themes/dototot/img/logo.svg"></a>
+	<p>
+		<em>Inspiring and empowering learners to produce
+		professional media with free and open source software.</em>
+		<small>(<a href="https://dototot.com/about-us/">more about us…</a>)</small>
+	</p>
+	<hr></div>
+<ul class="small-block-grid-1"><li id="advads_ad_widget-2" class="widget dotot-widget"><figure class="text-center"><a href="https://gumroad.com/l/penguin-puppet">
+		<img src="https://dototot.com/app/uploads/2015/08/penguin_puppet_cover_small.jpg"></a>
+</figure><p>
+	<strong>Penguin puppet pattern</strong> -
+	Craft your own fleece and foam character with our complete, ready-to-print penguin puppet pattern.
+</p>
+<a href="https://gumroad.com/l/penguin-puppet" class="button expand alert">
+	<i class="fa fa-shopping-cart fa-fw"></i>
+	Get It Now!
+</a></li>	</ul></aside></div>
+		<footer id="footer" class="row hide-for-small-only"><div class="small-8 small-offset-4 columns text-center">
+                <p>Dototot is a creative media company and think tank specializing in educational material. The contents of this website are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a></p>
+			</div>
+		</footer></div></div>
+
+	<link rel="stylesheet" id="advanced-responsive-video-embedder-css" href="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.css" type="text/css" media="all"><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/fastclick.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/placeholder.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/foundation.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js?ver=1.5.8"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/js/app.js"></script><script type="text/javascript" src="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.js"></script></body></html>

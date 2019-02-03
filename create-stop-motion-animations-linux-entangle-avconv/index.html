@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" id="arve" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Create Stop Motion Animations on Linux with Entangle and avconv • Dototot</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="https://dototot.com/apple-touch-icon.png"><meta name="description" content="Create amazing stop motion animations on Linux by remote capturing images with Entangle and compiling image sequences with avconv."><link rel="publisher" href="http://www.google.com/+Dotototdotcom"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="Create Stop Motion Animations on Linux with Entangle and avconv • Dototot"><meta property="og:description" content="Create amazing stop motion animations on Linux by remote capturing images with Entangle and compiling image sequences with avconv."><meta property="og:url" content="https://dototot.com/create-stop-motion-animations-linux-entangle-avconv/"><meta property="og:site_name" content="Dototot"><meta property="article:publisher" content="https://www.facebook.com/dototot"><meta property="article:author" content="https://www.facebook.com/jayarnielsen"><meta property="article:tag" content="animation"><meta property="article:tag" content="avconv"><meta property="article:tag" content="Entangle"><meta property="article:section" content="Animation"><meta property="article:published_time" content="2014-05-25T17:44:44-07:00"><meta property="article:modified_time" content="2019-02-03T08:40:40-07:00"><meta property="og:updated_time" content="2019-02-03T08:40:40-07:00"><meta property="fb:admins" content="100006882456857"><meta property="og:image" content="https://dototot.com/app/uploads/2014/05/animating.jpg"><meta property="og:image:width" content="1024"><meta property="og:image:height" content="574"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="Create amazing stop motion animations on Linux by remote capturing images with Entangle and compiling image sequences with avconv."><meta name="twitter:title" content="Create Stop Motion Animations on Linux with Entangle and avconv • Dototot"><meta name="twitter:site" content="@dotototdotcom"><meta name="twitter:image" content="https://dototot.com/app/uploads/2014/05/animating.jpg"><meta name="twitter:creator" content="@jayarnielsen"><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/PLACEHOLDER.wpsho\/","name":"Dototot","potentialAction":{"@type":"SearchAction","target":"http:\/\/PLACEHOLDER.wpsho\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/PLACEHOLDER.wpsho\/create-stop-motion-animations-linux-entangle-avconv\/","sameAs":["https:\/\/www.facebook.com\/dototot","https:\/\/instagram.com\/dototot\/","https:\/\/www.linkedin.com\/company\/dototot","http:\/\/www.google.com\/+Dotototdotcom","https:\/\/www.youtube.com\/c\/dotototdotcom","https:\/\/www.pinterest.com\/dototot\/","https:\/\/twitter.com\/dotototdotcom"],"@id":"#organization","name":"Dototot","logo":"http:\/\/PLACEHOLDER.wpsho\/app\/uploads\/2015\/06\/dototot.png"}</script><link rel="dns-prefetch" href="//s.w.org"><script>
+		/**
+  * based on domready (c) Dustin Diaz 2014 - License MIT
+  * https://github.com/ded/domready
+  */
+advanced_ads_ready = ( function() {
+  var fns = [], listener
+    , doc = typeof document === 'object' && document
+    , hack = doc && doc.documentElement.doScroll
+    , domContentLoaded = 'DOMContentLoaded'
+    , loaded = doc && (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState)
+
+  if (!loaded && doc){
+    listener = function () {
+	  doc.removeEventListener(domContentLoaded, listener)
+	  window.removeEventListener( "load", listener );
+	  loaded = 1
+	  while (listener = fns.shift()) listener()
+	}
+	  
+	doc.addEventListener(domContentLoaded, listener )
+	window.addEventListener( 'load', listener );
+  }
+
+  return function (fn) {
+    loaded ? setTimeout(fn, 0) : fns.push(fn)
+  }
+} )();
+</script><link rel="stylesheet" id="yarppWidgetCss-css" href="https://dototot.com/app/plugins/yet-another-related-posts-plugin/style/widget.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-css" href="https://dototot.com/wp/wp-includes/css/dist/block-library/style.css" type="text/css" media="all"><link rel="stylesheet" id="open-sans-font-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C400italic%2C700italic&ver=1.0" type="text/css" media="all"><link rel="stylesheet" id="fontawesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0" type="text/css" media="all"><link rel="stylesheet" id="slick-css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css?ver=1.5.8" type="text/css" media="all"><link rel="stylesheet" id="highlight-css" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/styles/default.min.css?ver=9.14.2" type="text/css" media="screen"><link rel="stylesheet" id="app-css" href="https://dototot.com/app/themes/dototot/css/app.css" type="text/css" media="all"><link rel="stylesheet" id="print-css" href="https://dototot.com/app/themes/dototot/css/print.css" type="text/css" media="print"><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?ver=2.1.4"></script><script type="text/javascript">
+/* <![CDATA[ */
+var gadwpUAEventsData = {"options":{"event_tracking":"1","event_downloads":"zip|mp3|mpeg|pdf|doc*|ppt*|xls*|jpeg|png|gif|tiff","event_bouncerate":"1","aff_tracking":0,"event_affiliates":"\/out\/","hash_tracking":0,"root_domain":"dototot.test","event_timeout":100,"event_precision":0,"event_formsubmit":0,"ga_pagescrolldepth_tracking":0}};
+/* ]]> */
+</script><script type="text/javascript" src="https://dototot.com/app/plugins/google-analytics-dashboard-for-wp/front/js/tracking-analytics-events.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/modernizr.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js?ver=1"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47778824-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script></head><body class="post-template-default single single-post postid-1582 single-format-standard">
+	
+	<div class="contain-to-grid hide-for-small-only">
+		<nav class="top-bar" data-topbar><ul class="title-area"><li class="name">
+					<h1>
+						<a href="http://dototot.com/">
+							<img src="https://dototot.com/app/themes/dototot/img/logo.svg">
+							Dototot - <span class="subtitle">Engaging education</span>
+						</a>
+					</h1>
+				</li>
+			</ul><section class="top-bar-section"><ul class="left"><li class="divider">
+					<li><a href="https://dototot.com/about-us/">About Us</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/services/">Services</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/our-work/">Our Work</a></li>
+					<li class="divider">
+					<li class="has-dropdown">
+						<a href="https://dototot.com/blog/">Blog & Tutorials</a>
+						<ul class="dropdown"><li><label>Categories</label></li>
+								<li class="cat-item cat-item-38"><a href="https://dototot.com/animation/">Animation</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://dototot.com/business-marketing/">Business & Marketing</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://dototot.com/design/">Design</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://dototot.com/et-cetera/">Et cetera</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://dototot.com/news/">News</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://dototot.com/programming/">Programming</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://dototot.com/puppets/">Puppets</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://dototot.com/video-production/">Video Production</a>
+</li>
+						</ul></li>
+					<li class="divider">
+				</ul></section></nav></div>
+	<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap">
+		
+		<nav class="tab-bar show-for-small-only"><div class="left-small">
+				<a href="#mobile-nav" role="button" aria-expanded="true" aria-controls="mobile-nav" class="left-off-canvas-toggle menu-icon">
+					<span></span>
+				</a>
+			</div>
+			<div class="right tab-bar-section">
+				<h1 class="title">
+					<a href="http://dototot.com/">
+						Dototot -
+						Engaging education					</a>
+				</h1>
+			</div>
+		</nav><nav class="left-off-canvas-menu" id="mobile-nav"><ul class="off-canvas-list"><li><label>Look Around</label></li>
+			</ul><ul id="menu-navigation" class="off-canvas-list"><li id="menu-item-2487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2487"><a href="https://dototot.com/">Home</a></li>
+<li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2483"><a href="https://dototot.com/blog/">Blog</a></li>
+<li id="menu-item-2484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://dototot.com/services/">Our Services</a></li>
+<li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2485"><a href="https://dototot.com/our-work/">Our Work</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://dototot.com/about-us/">About Us</a></li>
+</ul><ul class="off-canvas-list"><li><label>Connect with us!</label></li>
+				<li>
+					<a class="rss" href="https://dototot.com/feed/" rel="nofollow" target="_blank">
+						<i class="fa fa-rss fa-fw"></i> RSS Feed
+					</a>
+				</li>
+				<li>
+					<a class="twitter" href="https://twitter.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-twitter fa-fw"></i> Twitter
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="http://www.youtube.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-youtube fa-fw"></i> YouTube
+					</a>
+				</li>
+				<li>
+					<a class="facebook" href="http://www.facebook.com/dototot" rel="nofollow" target="_blank">
+						<i class="fa fa-facebook fa-fw"></i> Facebook
+					</a>
+				</li>
+				<li><label>Do a something search</label></li>
+			</ul><form class="searchform" action="http://PLACEHOLDER.wpsho/" method="get">
+	<div class="row collapse">
+		<div class="medium-12 columns">
+			<input type="search" name="s" value="" placeholder="Search Dototot…"></div>
+		<div class="medium-4 columns">
+			<button type="submit" title="Submit Search Query" class="button alert expand">
+				<i class="fa fa-search fa-fw"></i>
+			</button>
+		</div>
+	</div>
+</form>
+		</nav><a class="exit-off-canvas"></a>
+		
+		<div class="row" id="main-wrap">
+			<div id="main" class="medium-11 large-12 columns">
+
+	<article class="post-1582 post type-post status-publish format-standard has-post-thumbnail hentry category-animation tag-animation tag-avconv tag-entangle"><header class="post-header"><img width="955" height="540" src="https://dototot.com/app/uploads/2014/05/animating-955x540.jpg" class="attachment-post-header size-post-header wp-post-image" alt="Create Stop Motion Animations on Linux with Entangle and avconv" title="Create Stop Motion Animations on Linux with Entangle and avconv"><h1><span><span>Create Stop Motion Animations on Linux with Entangle and avconv</span></span></h1>
+	</header><div class="content-box">
+			
+				<p>Having grown up on <em>Wallace and Gromit</em>, <em>Things That Go Bump in the Night</em>, <em>Moonwalker</em>, and <em>The Nightmare Before Christmas</em>, stop motion animation is near and dear to me. I loved it so much as a kid that I developed a technique to make my own animations with my parents’ MiniDV camera by rapidly stopping and starting the record function. It worked well enough for my purposes, but I wouldn’t recommend it because there are now free tools that make the process much smoother.</p>
+<p>While we now have the wonderful and professional-grade stop motion animation studio, <a href="http://www.dragonframe.com/downloads/">Dragonframe</a>, on Linux, not everyone can afford such niche software. So lets look at how we can roll out own. At the most basic level, we need some way of connecting a camera to our computer for remote shooting and a way to compile those images into a movie. <a href="http://entangle-photo.org" target="_blank" rel="noopener">Entangle</a> and <a href="http://libav.org/avconv.html" target="_blank" rel="noopener">avconv</a> are just the tools for the job. It’s not as sophisticated as say, Dragonframe, but it’s a pretty powerful combination once you get the hang of it.</p>
+<p>Entangle uses the gPhoto library for remote shooting, so before we begin, make sure you have a <a href="http://www.gphoto.org/doc/remote/" target="_blank" rel="noopener">gPhoto compatible camera</a>. If your camera is not compatible with Entangle, don’t fret. You can still make animations by shooting blindly with you camera, copying the files to your computer, then compiling with avconv. The process isn’t as fancy, but that’s how this art form started, so you’d be animating just like the old pros!</p>
+<p>Depending on your operating system, you can probably install Entangle from the software repository, however I would advise against that. Entangle is constantly being updated, and I found that the version in the software repository had major problems that had been addressed in the newest release. This means we are going to have to build from source. So head over to the Entangle website and <a href="http://entangle-photo.org/download/sources/" target="_blank" rel="noopener">download the latest version</a>. Before we can install the program, we also need to make sure we have all of the build dependencies installed. As of this writing, you should be able to install everything on a Debian/Ubuntu system with the following command.</p>
+<pre class="wrap:true lang:sh decode:true ">sudo apt-get install gcc intltool libglib2.0-dev libgdk-pixbuf2.0-dev libgphoto2-dev libgexiv2-dev libraw-dev libgudev-1.0-dev libpeas-dev liblcms2-dev libgtk-3-dev libgirepository1.0-dev libdbus-glib-1-dev libffi-dev gobject-introspection</pre>
+<p>Now execute the following commands to extract, build, and install the Entangle source code.</p>
+<pre class="wrap:true lang:default decode:true">cd ~/Downloads
+tar -zxvf entangle-*
+cd entangle-*
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --libdir=/usr/lib
+make
+sudo make install</pre>
+<p>For other operating systems or if you encounter problems with the installation, check the <a href="http://entangle-photo.org/faq/" target="_blank" rel="noopener">Entangle FAQ</a>.</p>
+<p>Installing avconv is a piece of cake, by comparison. Just execute the following command.</p>
+<pre class="wrap:true lang:sh decode:true">sudo apt-get install libav-tools libavcodec-extra-53</pre>
+<p>Open Entangle and connect your camera to your computer. Right away Entangle will probably hit you with a couple of warnings about your camera. The first one asks if you want to unmount your camera because your operating system most likely already mounted it, preventing Entangle from accessing it.</p>
+<p><img class="aligncenter size-full wp-image-1623" src="https://dototot.com/app/uploads/2014/05/stopmo1.jpg" alt="entangle warning" width="658" height="176" srcset="https://dototot.com/app/uploads/2014/05/stopmo1.jpg 658w, https://dototot.com/app/uploads/2014/05/stopmo1-460x123.jpg 460w" sizes="(max-width: 658px) 100vw, 658px"></p>
+<p>The next one is a warning that thinks your camera is still in use. It’s not. Entangle just got ahead of itself.</p>
+<p><img class="aligncenter size-full wp-image-1624" src="https://dototot.com/app/uploads/2014/05/stompo2.jpg" alt="entangle warning" width="563" height="229" srcset="https://dototot.com/app/uploads/2014/05/stompo2.jpg 563w, https://dototot.com/app/uploads/2014/05/stompo2-460x187.jpg 460w" sizes="(max-width: 563px) 100vw, 563px"></p>
+<p>Click the affirmative for both of these and you should be up and running. If you click the “continuous capture preview” button at the top of the program, you will see on screen a live preview of your camera feed. How useful! Now if you click the capture button directly next to it, your live preview will go away. Not useful! We can fix this. Navigate to the program preferences, then the capture tab, and check the “continue preview mode after capture” checkbox.</p>
+<p><img class="aligncenter size-full wp-image-1625" src="https://dototot.com/app/uploads/2014/05/stompo3.jpg" alt="entangle preferences" width="644" height="200" srcset="https://dototot.com/app/uploads/2014/05/stompo3.jpg 644w, https://dototot.com/app/uploads/2014/05/stompo3-460x143.jpg 460w" sizes="(max-width: 644px) 100vw, 644px"></p>
+<p>Now when you capture an image, the program will return to the live view. At least it <em>should</em> return to the live view. If you get an “unable to capture preview” error, you will need to change the capture target to “Memory card” instead of “Internal RAM”. This setting is found in the camera settings menu on the left hand side of the program. If you don’t see this menu, click the “view full list of camera settings” button at the top of the program.</p>
+<p><img class="aligncenter size-full wp-image-1626" src="https://dototot.com/app/uploads/2014/05/stompo4.jpg" alt="entangle captuer target" width="312" height="172"></p>
+<p>Because it is critical that our lighting stay consistent from frame to frame, you should look through your available camera settings and manually set every setting (aperture, shutter speed, ISO). Also make sure any picture styles or in camera enhancements are turned off.</p>
+<p>Finally, we can begin animating. I made a paper Link for my animation, but you could animate anything. A lump of clay, old toys, or some scraps of paper. The possibilities are endless!</p>
+<p><img class="aligncenter size-full wp-image-1627" src="https://dototot.com/app/uploads/2014/05/stompo5.jpg" alt="stop motion link" width="600" height="327" srcset="https://dototot.com/app/uploads/2014/05/stompo5.jpg 600w, https://dototot.com/app/uploads/2014/05/stompo5-460x251.jpg 460w" sizes="(max-width: 600px) 100vw, 600px"></p>
+<p>Do you notice anything strange about my setup? It’s upside down! What’s that all about? I found it freed up a lot of space to work when my camera was positioned opposite me. This setup is ideal for shooting on a flat surface like a tabletop, and it’s trivial to rotate the video when we compile it.</p>
+<p>Making small adjustments to your model, capture each frame of the video one after the other. Ideally you would be shooting your animations at 24 frames per second, because this is the standard for film, but I’ve found that stop motion still looks good at only 10 or 12 frames. Just keep in mind that your animation will look crisper and more fluid with higher frame rates. The trade off is that you will need to shoot many more frames. For slow movements, you will want to make tiny adjustments between frames. Quick movements would require bigger adjustments, of course. While you can shoot several of the same frame to create a pause, it looks much more natural if there is a bit of movement in the frame. Lightly touching the model in between every frame will bring a static shot to life.</p>
+<p><img class="aligncenter size-full wp-image-1628" src="https://dototot.com/app/uploads/2014/05/stompo6.jpg" alt="stop motion mistake" width="526" height="162" srcset="https://dototot.com/app/uploads/2014/05/stompo6.jpg 526w, https://dototot.com/app/uploads/2014/05/stompo6-460x142.jpg 460w" sizes="(max-width: 526px) 100vw, 526px"></p>
+<p>If you make a mistake, like I just did, you can right click on the thumbnail and select delete. The only problem with this is that entangle won’t adjust the names of your other files to accommodate the missing frame. This will be a problem when we compile our video, but don’t worry about it for now. Continue on as though everything is perfectly okay.</p>
+<p>When you are satisfied with your animation (or tired of working on it), you may move on to <a title="How to Compile a Stop Motion Animation Image Sequence with avconv" href="https://dototot.com/compile-stop-motion-animation-image-sequence-avconv/">compiling your animation with avconv</a>.</p>
+
+													<div class="post-tags">
+						<p>
+																								<a class="label info" href="https://dototot.com/animation/">
+										<i class="fa fa-tag fa-fw"></i>
+										Animation									</a>
+																																							<a class="label info" href="https://dototot.com/tag/animation/">
+										<i class="fa fa-tag fa-fw"></i>
+										animation									</a>
+																	<a class="label info" href="https://dototot.com/tag/avconv/">
+										<i class="fa fa-tag fa-fw"></i>
+										avconv									</a>
+																	<a class="label info" href="https://dototot.com/tag/entangle/">
+										<i class="fa fa-tag fa-fw"></i>
+										Entangle									</a>
+																					</p>
+					</div>
+									</div>
+
+		<div class="section-title">Hands-on Computer Science</div>
+<div class="content-box">
+<div class="row">
+	<div class="large-8 columns text-center">
+		<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-bsXqCi4zp-s" style="max-width:915px;" itemscope itemtype="http://schema.org/VideoObject"><div class="arve-embed-container" style="padding-bottom:56.250000%"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="arve-iframe fitvidsignore" frameborder="0" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/bsXqCi4zp-s?iv_load_policy=3&modestbranding=1&rel=0&autohide=1&playsinline=1&autoplay=0" width="480" height="270"></iframe></div></div>	</div>
+	<div class="large-8 columns">
+		<p>Learn computer science, programming, and web development with us, your educational and entertaining super friends.</p>
+		<a href="http://www.youtube.com/subscription_center?add_user=helloworldprogram" class="button large primary expand no-bottom-margin">
+			<i class="fa fa-youtube fa-fw"></i>			
+			Subscribe to our YouTube Channel
+		</a>
+	</div>
+</div>
+</div>
+				<div class="section-title">About the Author</div>
+		<div class="content-box">
+			<div class="row">
+				<div class="medium-6 large-4 columns">
+					<p class="hidden-for-small-only no-bottom-margin"><a href="https://dototot.com/author/jay/">
+						<img src="http://1.gravatar.com/avatar/dbf86d4bb96f2df787e051bb74ab9732?s=250&d=mm&r=g" width="250" height="250" alt="" class="avatar avatar-250 wp-user-avatar wp-user-avatar-250 photo avatar-default"></a></p>
+				</div>
+				<div class="medium-10 large-12 columns">
+					<p>
+						<em>Create Stop Motion Animations on Linux with Entangle and avconv</em>
+						was posted by <a href="https://dototot.com/author/jay/" title="Posts by Jay" rel="author">Jay</a>						on <time datetime="2014-05-25" itemprop="datePublished">May 25th, 2014</time>.
+						I am one half of the creative force behind Dototot. I'm a writer, web programmer, composer, designer, and video editor with an interest in all things digital media.					</p>
+					<p>
+						Discuss this article in the
+						<a href="#discussion"><i class="fa fa-comments"></i> Comments</a> below, or
+												<a class="twitter-share" target="_blank" rel="nofollow" href="https://twitter.com/share?text=Create+Stop+Motion+Animations+on+Linux+with+Entangle+and+avconv&url=https%3A%2F%2Fgoo.gl%2FN42UCp&via=dotototdotcom">
+							<i class="fa fa-twitter-square"></i>
+							tweet
+						</a>
+						and
+												<a class="facebook-share" target="_blank" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fdototot.test%2Fcreate-stop-motion-animations-linux-entangle-avconv%2F">
+							<i class="fa fa-facebook-square"></i>
+							share
+						</a>
+						it with your friends.
+					</p>
+				</div>
+			</div>
+		</div>
+
+					<div class="section-title">Recommended for you</div>
+			<article id="recommended" class="content-box"><div class="yarpp-related">
+	<ul class="small-block-grid-2 large-block-grid-4 recommended-posts"><li>
+					<a href="https://dototot.com/compile-stop-motion-animation-image-sequence-avconv/" title="How to Compile a Stop Motion Animation Image Sequence with avconv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/05/animating2-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How to Compile a Stop Motion Animation Image Sequence with avconv" title="How to Compile a Stop Motion Animation Image Sequence with avconv"><span>How to Compile a Stop…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/how-to-create-animated-gifs-from-a-png-sequence-with-imagemagick-and-the-command-line/" title="How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2015/03/0023-1-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line" title="How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line"><span>How To Create Animated GIFs…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/how-to-trim-videos-with-the-command-line-using-avconv/" title="How to Trim Videos with the Command Line Using AVConv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2013/08/trimming-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How to Trim Videos with the Command Line Using AVConv" title="How to Trim Videos with the Command Line Using AVConv"><span>How to Trim Videos with…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/transform-scanner-animation-studio/" title="Transform Your Scanner Into an Animation Studio">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/09/scanning-animation-frames-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Transform Your Scanner Into an Animation Studio" title="Transform Your Scanner Into an Animation Studio"><span>Transform Your Scanner Into an…</span>
+					</a>
+				</li>
+						</ul></div>
+			</article></article></div>
+							<aside id="sidebar" class="medium-5 large-4 columns"><div id="logo" class="hide-for-small-only">
+	<a href="http://dototot.com/" rel="nofollow">
+		<img src="https://dototot.com/app/themes/dototot/img/logo.svg"></a>
+	<p>
+		<em>Inspiring and empowering learners to produce
+		professional media with free and open source software.</em>
+		<small>(<a href="https://dototot.com/about-us/">more about us…</a>)</small>
+	</p>
+	<hr></div>
+<ul class="small-block-grid-1"><li id="advads_ad_widget-2" class="widget dotot-widget"><figure class="text-center"><a href="https://gumroad.com/l/penguin-puppet">
+		<img src="https://dototot.com/app/uploads/2015/08/penguin_puppet_cover_small.jpg"></a>
+</figure><p>
+	<strong>Penguin puppet pattern</strong> -
+	Craft your own fleece and foam character with our complete, ready-to-print penguin puppet pattern.
+</p>
+<a href="https://gumroad.com/l/penguin-puppet" class="button expand alert">
+	<i class="fa fa-shopping-cart fa-fw"></i>
+	Get It Now!
+</a></li>	</ul></aside></div>
+		<footer id="footer" class="row hide-for-small-only"><div class="small-8 small-offset-4 columns text-center">
+                <p>Dototot is a creative media company and think tank specializing in educational material. The contents of this website are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a></p>
+			</div>
+		</footer></div></div>
+
+	<link rel="stylesheet" id="advanced-responsive-video-embedder-css" href="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.css" type="text/css" media="all"><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/fastclick.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/placeholder.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/foundation.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js?ver=1.5.8"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/js/app.js"></script><script type="text/javascript" src="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.js"></script></body></html>

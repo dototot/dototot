@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" id="arve" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>How to Export Best Quality Master Video From Lightworks • Dototot</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="https://dototot.com/apple-touch-icon.png"><meta name="description" content="How to Export Best Quality Master Video From Lightworks and other digital media material tutorials."><link rel="publisher" href="http://www.google.com/+Dotototdotcom"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="How to Export Best Quality Master Video From Lightworks • Dototot"><meta property="og:description" content="How to Export Best Quality Master Video From Lightworks and other digital media material tutorials."><meta property="og:url" content="https://dototot.com/how-to-export-high-quality-master-from-lightworks/"><meta property="og:site_name" content="Dototot"><meta property="article:publisher" content="https://www.facebook.com/dototot"><meta property="article:author" content="https://www.facebook.com/jayarnielsen"><meta property="article:tag" content="avconv"><meta property="article:tag" content="Command Line"><meta property="article:tag" content="Lightworks"><meta property="article:tag" content="Video Editing"><meta property="article:section" content="Video Production"><meta property="article:published_time" content="2013-07-05T18:53:31-07:00"><meta property="article:modified_time" content="2016-02-02T20:05:42-07:00"><meta property="og:updated_time" content="2016-02-02T20:05:42-07:00"><meta property="fb:admins" content="100006882456857"><meta property="og:image" content="https://dototot.com/app/uploads/2013/07/exporting.jpg"><meta property="og:image:width" content="1000"><meta property="og:image:height" content="490"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="How to Export Best Quality Master Video From Lightworks and other digital media material tutorials."><meta name="twitter:title" content="How to Export Best Quality Master Video From Lightworks • Dototot"><meta name="twitter:site" content="@dotototdotcom"><meta name="twitter:image" content="https://dototot.com/app/uploads/2013/07/exporting.jpg"><meta name="twitter:creator" content="@jayarnielsen"><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/PLACEHOLDER.wpsho\/","name":"Dototot","potentialAction":{"@type":"SearchAction","target":"http:\/\/PLACEHOLDER.wpsho\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/PLACEHOLDER.wpsho\/how-to-export-high-quality-master-from-lightworks\/","sameAs":["https:\/\/www.facebook.com\/dototot","https:\/\/instagram.com\/dototot\/","https:\/\/www.linkedin.com\/company\/dototot","http:\/\/www.google.com\/+Dotototdotcom","https:\/\/www.youtube.com\/c\/dotototdotcom","https:\/\/www.pinterest.com\/dototot\/","https:\/\/twitter.com\/dotototdotcom"],"@id":"#organization","name":"Dototot","logo":"http:\/\/PLACEHOLDER.wpsho\/app\/uploads\/2015\/06\/dototot.png"}</script><link rel="dns-prefetch" href="//s.w.org"><script>
+		/**
+  * based on domready (c) Dustin Diaz 2014 - License MIT
+  * https://github.com/ded/domready
+  */
+advanced_ads_ready = ( function() {
+  var fns = [], listener
+    , doc = typeof document === 'object' && document
+    , hack = doc && doc.documentElement.doScroll
+    , domContentLoaded = 'DOMContentLoaded'
+    , loaded = doc && (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState)
+
+  if (!loaded && doc){
+    listener = function () {
+	  doc.removeEventListener(domContentLoaded, listener)
+	  window.removeEventListener( "load", listener );
+	  loaded = 1
+	  while (listener = fns.shift()) listener()
+	}
+	  
+	doc.addEventListener(domContentLoaded, listener )
+	window.addEventListener( 'load', listener );
+  }
+
+  return function (fn) {
+    loaded ? setTimeout(fn, 0) : fns.push(fn)
+  }
+} )();
+</script><link rel="stylesheet" id="yarppWidgetCss-css" href="https://dototot.com/app/plugins/yet-another-related-posts-plugin/style/widget.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-css" href="https://dototot.com/wp/wp-includes/css/dist/block-library/style.css" type="text/css" media="all"><link rel="stylesheet" id="open-sans-font-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C400italic%2C700italic&ver=1.0" type="text/css" media="all"><link rel="stylesheet" id="fontawesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0" type="text/css" media="all"><link rel="stylesheet" id="slick-css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css?ver=1.5.8" type="text/css" media="all"><link rel="stylesheet" id="highlight-css" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/styles/default.min.css?ver=9.14.2" type="text/css" media="screen"><link rel="stylesheet" id="app-css" href="https://dototot.com/app/themes/dototot/css/app.css" type="text/css" media="all"><link rel="stylesheet" id="print-css" href="https://dototot.com/app/themes/dototot/css/print.css" type="text/css" media="print"><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?ver=2.1.4"></script><script type="text/javascript">
+/* <![CDATA[ */
+var gadwpUAEventsData = {"options":{"event_tracking":"1","event_downloads":"zip|mp3|mpeg|pdf|doc*|ppt*|xls*|jpeg|png|gif|tiff","event_bouncerate":"1","aff_tracking":0,"event_affiliates":"\/out\/","hash_tracking":0,"root_domain":"dototot.test","event_timeout":100,"event_precision":0,"event_formsubmit":0,"ga_pagescrolldepth_tracking":0}};
+/* ]]> */
+</script><script type="text/javascript" src="https://dototot.com/app/plugins/google-analytics-dashboard-for-wp/front/js/tracking-analytics-events.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/modernizr.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js?ver=1"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47778824-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script></head><body class="post-template-default single single-post postid-749 single-format-standard">
+	
+	<div class="contain-to-grid hide-for-small-only">
+		<nav class="top-bar" data-topbar><ul class="title-area"><li class="name">
+					<h1>
+						<a href="http://dototot.com/">
+							<img src="https://dototot.com/app/themes/dototot/img/logo.svg">
+							Dototot - <span class="subtitle">Engaging education</span>
+						</a>
+					</h1>
+				</li>
+			</ul><section class="top-bar-section"><ul class="left"><li class="divider">
+					<li><a href="https://dototot.com/about-us/">About Us</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/services/">Services</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/our-work/">Our Work</a></li>
+					<li class="divider">
+					<li class="has-dropdown">
+						<a href="https://dototot.com/blog/">Blog & Tutorials</a>
+						<ul class="dropdown"><li><label>Categories</label></li>
+								<li class="cat-item cat-item-38"><a href="https://dototot.com/animation/">Animation</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://dototot.com/business-marketing/">Business & Marketing</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://dototot.com/design/">Design</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://dototot.com/et-cetera/">Et cetera</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://dototot.com/news/">News</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://dototot.com/programming/">Programming</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://dototot.com/puppets/">Puppets</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://dototot.com/video-production/">Video Production</a>
+</li>
+						</ul></li>
+					<li class="divider">
+				</ul></section></nav></div>
+	<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap">
+		
+		<nav class="tab-bar show-for-small-only"><div class="left-small">
+				<a href="#mobile-nav" role="button" aria-expanded="true" aria-controls="mobile-nav" class="left-off-canvas-toggle menu-icon">
+					<span></span>
+				</a>
+			</div>
+			<div class="right tab-bar-section">
+				<h1 class="title">
+					<a href="http://dototot.com/">
+						Dototot -
+						Engaging education					</a>
+				</h1>
+			</div>
+		</nav><nav class="left-off-canvas-menu" id="mobile-nav"><ul class="off-canvas-list"><li><label>Look Around</label></li>
+			</ul><ul id="menu-navigation" class="off-canvas-list"><li id="menu-item-2487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2487"><a href="https://dototot.com/">Home</a></li>
+<li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2483"><a href="https://dototot.com/blog/">Blog</a></li>
+<li id="menu-item-2484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://dototot.com/services/">Our Services</a></li>
+<li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2485"><a href="https://dototot.com/our-work/">Our Work</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://dototot.com/about-us/">About Us</a></li>
+</ul><ul class="off-canvas-list"><li><label>Connect with us!</label></li>
+				<li>
+					<a class="rss" href="https://dototot.com/feed/" rel="nofollow" target="_blank">
+						<i class="fa fa-rss fa-fw"></i> RSS Feed
+					</a>
+				</li>
+				<li>
+					<a class="twitter" href="https://twitter.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-twitter fa-fw"></i> Twitter
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="http://www.youtube.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-youtube fa-fw"></i> YouTube
+					</a>
+				</li>
+				<li>
+					<a class="facebook" href="http://www.facebook.com/dototot" rel="nofollow" target="_blank">
+						<i class="fa fa-facebook fa-fw"></i> Facebook
+					</a>
+				</li>
+				<li><label>Do a something search</label></li>
+			</ul><form class="searchform" action="http://PLACEHOLDER.wpsho/" method="get">
+	<div class="row collapse">
+		<div class="medium-12 columns">
+			<input type="search" name="s" value="" placeholder="Search Dototot…"></div>
+		<div class="medium-4 columns">
+			<button type="submit" title="Submit Search Query" class="button alert expand">
+				<i class="fa fa-search fa-fw"></i>
+			</button>
+		</div>
+	</div>
+</form>
+		</nav><a class="exit-off-canvas"></a>
+		
+		<div class="row" id="main-wrap">
+			<div id="main" class="medium-11 large-12 columns">
+
+	<article class="post-749 post type-post status-publish format-standard has-post-thumbnail hentry category-video-production tag-avconv tag-command-line tag-lightworks tag-video-editing"><header class="post-header"><img width="955" height="490" src="https://dototot.com/app/uploads/2013/07/exporting-955x490.jpg" class="attachment-post-header size-post-header wp-post-image" alt="How to Export Best Quality Master Video From Lightworks" title="How to Export Best Quality Master Video From Lightworks"><h1><span><span>How to Export Best Quality Master Video From Lightworks</span></span></h1>
+	</header><div class="content-box">
+			
+				<p>The Lightworks for Linux beta currently has many issues with exporting videos. Exporting to DVCPRO100 (the Lightworks preferred format) will result in a video that doesn’t play in some players or plays back with strange black borders in others. Exporting to UYVY will give you a ridiculously massive file in the range of ten gigabytes per minute. That’s because UYVY is totally raw, uncompressed video. Something about the way that Lightworks exports UYVY doesn’t play well with video converters, so you end up stuck with a huge archive video that Lightworks itself can’t even re-import! So until Edit Share fixes these problems, here’s a workaround for exporting a high quality master copy of your edits. Open the export settings window and change the format to “Image sequence” and the file type to “TGA”.</p>
+<p><img class="aligncenter size-full wp-image-750" alt="lwks1" src="https://dototot.com/app/uploads/2013/07/lwks1.jpg" width="395" height="254"></p>
+<p>I found TGA produced the most consistent results. PNG sometimes introduced artifacts into random frames, and JPG looks to have been significantly compressed already. Click on the destination folder and navigate to where you want to save your exported video.</p>
+<p><img class="aligncenter size-full wp-image-751" alt="lightworks file browser" src="https://dototot.com/app/uploads/2013/07/lwks21.jpg" width="589" height="229" srcset="https://dototot.com/app/uploads/2013/07/lwks21.jpg 589w, https://dototot.com/app/uploads/2013/07/lwks21-460x179.jpg 460w" sizes="(max-width: 589px) 100vw, 589px"></p>
+<p>Create a new folder to hold your images. I’m simply calling mine “movie”.</p>
+<p><img class="aligncenter size-full wp-image-752" alt="lightworks file browser" src="https://dototot.com/app/uploads/2013/07/lwks31.jpg" width="307" height="121"></p>
+<p>Select the new folder as your destination folder and also set the name to something short and simple, like “movie”. This will be the prefix for the image files that Lightworks creates. Meaning all of the files will be named movie dash six digit sequence number dot tga.</p>
+<p><img class="aligncenter size-full wp-image-753" alt="lightworks file browser" src="https://dototot.com/app/uploads/2013/07/lwks41.jpg" width="382" height="131"></p>
+<p>Export the image sequence, then in the export settings change the format to “WAV”. Leave the destination folder and name the same, and export again.</p>
+<p><img class="aligncenter size-full wp-image-754" alt="Lightworks export wav" src="https://dototot.com/app/uploads/2013/07/lwks51.jpg" width="374" height="353"></p>
+<p>We’ll be using a program called Avconv to compile our image sequence. If you don’t have it installed, you can do so with the following terminal command:</p>
+<pre class="wrap:true lang:sh decode:true">sudo apt-get install libav-tools libavcodec-extra-53</pre>
+<p>When that’s done installing, navigate to the folder you just made. Mine is on my desktop, so the terminal command would be:</p>
+<pre class="wrap:true lang:sh decode:true">cd ~/Desktop/movie</pre>
+<p>If you’re not familiar with navigating file systems with the command line, all you need to know is that “cd” stands for change directory, and the tilde before “/Desktop” is a shortcut for your home folder. Alternatively, depending on your Linux distribution, you could open the folder you made, right click anywhere in the folder, and select “open in terminal”.</p>
+<p>Now for the real magic. Enter this Avconv command, replacing “movie” with whatever you chose for your file name prefix and changing the frame rate and video size to match your Lightworks project.</p>
+<pre class="wrap:true lang:sh decode:true">avconv -f image2 -r 30 -i movie-%06d.tga -i movie.wav -r:v 30 -c:v libx264 -preset veryslow -qp 0 -pix_fmt yuv420p -s:v hd1080 -c:a flac out.mkv</pre>
+<p><strong></strong>Lets break down this command so you know what’s happening here. The first thing Avconv wants to know is what files it should convert and anything special it should know about them. When converting a video, usually all you’d need to use is the “-i” flag to specify the input file. Since we have thousands of images we want to combine into one video, we need a few more options. Below is a brief description of all of the options used in this command.</p>
+<p><strong>-f</strong> specifies the format, in this case “image2” means an image sequence.</p>
+<p><strong>-r</strong> specifies the input framerate. This should match your Lightworks project.</p>
+<p><strong>-i</strong> specifies the input file. Because we have separate audio and images, we use the flag twice. Notice the first instance uses %06d in the file name to indicate that this part is an increasing number with leading zeros and 6 total digits.</p>
+<p><strong>-r:v</strong> specifies the output frame rate for the video. Set this to be the same as the input.</p>
+<p><strong>-c:v</strong> specifies the video codec. You can experiment with different codecs, but x264 will allow you to make a lossless video with a relatively small file size.</p>
+<p><strong>-preset</strong> is specific to the libx264 codec. It determines how fast your computer will process the video. Faster encode times will mean larger files, and slower encode times means smaller files.</p>
+<p><strong>-qp</strong> is specific to the libx264 codec and is what tells avconv to make this video lossless.</p>
+<p><strong>-pix_fmt</strong> is the colorspace for the video.</p>
+<p><strong>-s:v</strong> is the size of the video. You can use a shorthand string like hd1080, hd720 or write out a custom size as width by height, such as 1920×1080.</p>
+<p><strong>-c:a</strong> is the audio codec. Flac is a lossless audio codec with good compression, so it works well for our master copy.</p>
+<p>When you’ve adjusted the options according to your video, run the command and wait patiently as Avconv crunches your video.</p>
+<p><img class="aligncenter size-full wp-image-755" alt="avconv" src="https://dototot.com/app/uploads/2013/07/avconv.jpg" width="600" height="414" srcset="https://dototot.com/app/uploads/2013/07/avconv.jpg 600w, https://dototot.com/app/uploads/2013/07/avconv-460x317.jpg 460w" sizes="(max-width: 600px) 100vw, 600px"></p>
+<p>The only downside to the file we just made is that Lightworks won’t be able to import it. If you need to import this file into Lightworks, you’ll need to follow these instructions on <a title="Convert Videos For Import Into Lightworks With Avconv" href="https://dototot.com/convert-videos-for-import-into-lightworks-with-avconv/">converting videos for importing into Lightworks</a>.</p>
+
+													<div class="post-tags">
+						<p>
+																								<a class="label info" href="https://dototot.com/video-production/">
+										<i class="fa fa-tag fa-fw"></i>
+										Video Production									</a>
+																																							<a class="label info" href="https://dototot.com/tag/avconv/">
+										<i class="fa fa-tag fa-fw"></i>
+										avconv									</a>
+																	<a class="label info" href="https://dototot.com/tag/command-line/">
+										<i class="fa fa-tag fa-fw"></i>
+										Command Line									</a>
+																	<a class="label info" href="https://dototot.com/tag/lightworks/">
+										<i class="fa fa-tag fa-fw"></i>
+										Lightworks									</a>
+																	<a class="label info" href="https://dototot.com/tag/video-editing/">
+										<i class="fa fa-tag fa-fw"></i>
+										Video Editing									</a>
+																					</p>
+					</div>
+									</div>
+
+		<div class="section-title">Hands-on Computer Science</div>
+<div class="content-box">
+<div class="row">
+	<div class="large-8 columns text-center">
+		<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-bsXqCi4zp-s" style="max-width:915px;" itemscope itemtype="http://schema.org/VideoObject"><div class="arve-embed-container" style="padding-bottom:56.250000%"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="arve-iframe fitvidsignore" frameborder="0" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/bsXqCi4zp-s?iv_load_policy=3&modestbranding=1&rel=0&autohide=1&playsinline=1&autoplay=0" width="480" height="270"></iframe></div></div>	</div>
+	<div class="large-8 columns">
+		<p>Learn computer science, programming, and web development with us, your educational and entertaining super friends.</p>
+		<a href="http://www.youtube.com/subscription_center?add_user=helloworldprogram" class="button large primary expand no-bottom-margin">
+			<i class="fa fa-youtube fa-fw"></i>			
+			Subscribe to our YouTube Channel
+		</a>
+	</div>
+</div>
+</div>
+				<div class="section-title">About the Author</div>
+		<div class="content-box">
+			<div class="row">
+				<div class="medium-6 large-4 columns">
+					<p class="hidden-for-small-only no-bottom-margin"><a href="https://dototot.com/author/jay/">
+						<img src="http://1.gravatar.com/avatar/dbf86d4bb96f2df787e051bb74ab9732?s=250&d=mm&r=g" width="250" height="250" alt="" class="avatar avatar-250 wp-user-avatar wp-user-avatar-250 photo avatar-default"></a></p>
+				</div>
+				<div class="medium-10 large-12 columns">
+					<p>
+						<em>How to Export Best Quality Master Video From Lightworks</em>
+						was posted by <a href="https://dototot.com/author/jay/" title="Posts by Jay" rel="author">Jay</a>						on <time datetime="2013-07-05" itemprop="datePublished">July 5th, 2013</time>.
+						I am one half of the creative force behind Dototot. I'm a writer, web programmer, composer, designer, and video editor with an interest in all things digital media.					</p>
+					<p>
+						Discuss this article in the
+						<a href="#discussion"><i class="fa fa-comments"></i> Comments</a> below, or
+												<a class="twitter-share" target="_blank" rel="nofollow" href="https://twitter.com/share?text=How+to+Export+Best+Quality+Master+Video+From+Lightworks&url=http%3A%2F%2Fgoo.gl%2FObJQeE&via=dotototdotcom">
+							<i class="fa fa-twitter-square"></i>
+							tweet
+						</a>
+						and
+												<a class="facebook-share" target="_blank" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fdototot.test%2Fhow-to-export-high-quality-master-from-lightworks%2F">
+							<i class="fa fa-facebook-square"></i>
+							share
+						</a>
+						it with your friends.
+					</p>
+				</div>
+			</div>
+		</div>
+
+					<div class="section-title">Recommended for you</div>
+			<article id="recommended" class="content-box"><div class="yarpp-related">
+	<ul class="small-block-grid-2 large-block-grid-4 recommended-posts"><li>
+					<a href="https://dototot.com/convert-videos-for-import-into-lightworks-with-avconv/" title="Convert Videos For Import Into Lightworks With Avconv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2013/08/lwksconvert-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Convert Videos For Import Into Lightworks With Avconv" title="Convert Videos For Import Into Lightworks With Avconv"><span>Convert Videos For Import Into…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/how-to-trim-videos-with-the-command-line-using-avconv/" title="How to Trim Videos with the Command Line Using AVConv">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2013/08/trimming-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How to Trim Videos with the Command Line Using AVConv" title="How to Trim Videos with the Command Line Using AVConv"><span>How to Trim Videos with…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/lightworks-shared-project-spaces-editing-from-external-hard-drive/" title="Lightworks Shared Project Spaces and Editing From an External Hard Drive">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/03/pspace-featured-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Lightworks Shared Project Spaces and Editing From an External Hard Drive" title="Lightworks Shared Project Spaces and Editing From an External Hard Drive"><span>Lightworks Shared Project Spaces and…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/lightworks-video-editing-advanced-trimming-techniques/" title="Lightworks Video Editing: Advanced Trimming Techniques">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/06/trimfeatured-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Lightworks Video Editing: Advanced Trimming Techniques" title="Lightworks Video Editing: Advanced Trimming Techniques"><span>Lightworks Video Editing: Advanced Trimming…</span>
+					</a>
+				</li>
+						</ul></div>
+			</article></article></div>
+							<aside id="sidebar" class="medium-5 large-4 columns"><div id="logo" class="hide-for-small-only">
+	<a href="http://dototot.com/" rel="nofollow">
+		<img src="https://dototot.com/app/themes/dototot/img/logo.svg"></a>
+	<p>
+		<em>Inspiring and empowering learners to produce
+		professional media with free and open source software.</em>
+		<small>(<a href="https://dototot.com/about-us/">more about us…</a>)</small>
+	</p>
+	<hr></div>
+<ul class="small-block-grid-1"><li id="advads_ad_widget-2" class="widget dotot-widget"><figure class="text-center"><a href="https://gumroad.com/l/python-puppet">
+		<img src="https://dototot.com/app/uploads/2015/08/python_puppet_cover_small.jpg"></a>
+</figure><p>
+	<strong>Python puppet pattern</strong> -
+	Craft your own fleece and foam character with our complete, ready-to-print python puppet pattern.
+</p>
+<a href="https://gumroad.com/l/python-puppet" class="button expand alert">
+	<i class="fa fa-shopping-cart fa-fw"></i>
+	Get It Now!
+</a></li>	</ul></aside></div>
+		<footer id="footer" class="row hide-for-small-only"><div class="small-8 small-offset-4 columns text-center">
+                <p>Dototot is a creative media company and think tank specializing in educational material. The contents of this website are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a></p>
+			</div>
+		</footer></div></div>
+
+	<link rel="stylesheet" id="advanced-responsive-video-embedder-css" href="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.css" type="text/css" media="all"><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/fastclick.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/placeholder.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/foundation.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js?ver=1.5.8"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/js/app.js"></script><script type="text/javascript" src="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.js"></script></body></html>

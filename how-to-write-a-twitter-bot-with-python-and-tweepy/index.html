@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" id="arve" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>How To Write a Twitter Bot with Python and tweepy • Dototot</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="https://dototot.com/apple-touch-icon.png"><meta name="description" content="Twitter is the social media site for robots. You probably have robot friends and followers and don't even realize it! In this tutorial, you're going to write your own Twitter bot with Python and tweepy, and then set it loose in the world."><link rel="publisher" href="http://www.google.com/+Dotototdotcom"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="How To Write a Twitter Bot with Python and tweepy • Dototot"><meta property="og:description" content="Twitter is the social media site for robots. You probably have robot friends and followers and don't even realize it! In this tutorial, you're going to write your own Twitter bot with Python and tweepy, and then set it loose in the world."><meta property="og:url" content="https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/"><meta property="og:site_name" content="Dototot"><meta property="article:publisher" content="https://www.facebook.com/dototot"><meta property="article:tag" content="Python"><meta property="article:tag" content="Social Media"><meta property="article:section" content="Programming"><meta property="article:published_time" content="2013-11-27T02:19:13-07:00"><meta property="article:modified_time" content="2015-05-25T10:20:23-07:00"><meta property="og:updated_time" content="2015-05-25T10:20:23-07:00"><meta property="fb:admins" content="100006882456857"><meta property="og:image" content="https://dototot.com/app/uploads/2013/11/guidoTwitterBot_final1-1.jpg"><meta property="og:image:width" content="960"><meta property="og:image:height" content="514"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="Twitter is the social media site for robots. You probably have robot friends and followers and don't even realize it! In this tutorial, you're going to write your own Twitter bot with Python and tweepy, and then set it loose in the world."><meta name="twitter:title" content="How To Write a Twitter Bot with Python and tweepy • Dototot"><meta name="twitter:site" content="@dotototdotcom"><meta name="twitter:image" content="https://dototot.com/app/uploads/2013/11/guidoTwitterBot_final1-1.jpg"><meta name="twitter:creator" content="@jarednielsen"><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/PLACEHOLDER.wpsho\/","name":"Dototot","potentialAction":{"@type":"SearchAction","target":"http:\/\/PLACEHOLDER.wpsho\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/PLACEHOLDER.wpsho\/how-to-write-a-twitter-bot-with-python-and-tweepy\/","sameAs":["https:\/\/www.facebook.com\/dototot","https:\/\/instagram.com\/dototot\/","https:\/\/www.linkedin.com\/company\/dototot","http:\/\/www.google.com\/+Dotototdotcom","https:\/\/www.youtube.com\/c\/dotototdotcom","https:\/\/www.pinterest.com\/dototot\/","https:\/\/twitter.com\/dotototdotcom"],"@id":"#organization","name":"Dototot","logo":"http:\/\/PLACEHOLDER.wpsho\/app\/uploads\/2015\/06\/dototot.png"}</script><link rel="dns-prefetch" href="//s.w.org"><script>
+		/**
+  * based on domready (c) Dustin Diaz 2014 - License MIT
+  * https://github.com/ded/domready
+  */
+advanced_ads_ready = ( function() {
+  var fns = [], listener
+    , doc = typeof document === 'object' && document
+    , hack = doc && doc.documentElement.doScroll
+    , domContentLoaded = 'DOMContentLoaded'
+    , loaded = doc && (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState)
+
+  if (!loaded && doc){
+    listener = function () {
+	  doc.removeEventListener(domContentLoaded, listener)
+	  window.removeEventListener( "load", listener );
+	  loaded = 1
+	  while (listener = fns.shift()) listener()
+	}
+	  
+	doc.addEventListener(domContentLoaded, listener )
+	window.addEventListener( 'load', listener );
+  }
+
+  return function (fn) {
+    loaded ? setTimeout(fn, 0) : fns.push(fn)
+  }
+} )();
+</script><link rel="stylesheet" id="yarppWidgetCss-css" href="https://dototot.com/app/plugins/yet-another-related-posts-plugin/style/widget.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-css" href="https://dototot.com/wp/wp-includes/css/dist/block-library/style.css" type="text/css" media="all"><link rel="stylesheet" id="open-sans-font-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C700%2C300%2C400italic%2C700italic&ver=1.0" type="text/css" media="all"><link rel="stylesheet" id="fontawesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0" type="text/css" media="all"><link rel="stylesheet" id="slick-css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css?ver=1.5.8" type="text/css" media="all"><link rel="stylesheet" id="highlight-css" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/styles/default.min.css?ver=9.14.2" type="text/css" media="screen"><link rel="stylesheet" id="app-css" href="https://dototot.com/app/themes/dototot/css/app.css" type="text/css" media="all"><link rel="stylesheet" id="print-css" href="https://dototot.com/app/themes/dototot/css/print.css" type="text/css" media="print"><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?ver=2.1.4"></script><script type="text/javascript">
+/* <![CDATA[ */
+var gadwpUAEventsData = {"options":{"event_tracking":"1","event_downloads":"zip|mp3|mpeg|pdf|doc*|ppt*|xls*|jpeg|png|gif|tiff","event_bouncerate":"1","aff_tracking":0,"event_affiliates":"\/out\/","hash_tracking":0,"root_domain":"dototot.test","event_timeout":100,"event_precision":0,"event_formsubmit":0,"ga_pagescrolldepth_tracking":0}};
+/* ]]> */
+</script><script type="text/javascript" src="https://dototot.com/app/plugins/google-analytics-dashboard-for-wp/front/js/tracking-analytics-events.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/modernizr.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js?ver=1"></script><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47778824-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script></head><body class="post-template-default single single-post postid-1057 single-format-standard">
+	
+	<div class="contain-to-grid hide-for-small-only">
+		<nav class="top-bar" data-topbar><ul class="title-area"><li class="name">
+					<h1>
+						<a href="http://dototot.com/">
+							<img src="https://dototot.com/app/themes/dototot/img/logo.svg">
+							Dototot - <span class="subtitle">Engaging education</span>
+						</a>
+					</h1>
+				</li>
+			</ul><section class="top-bar-section"><ul class="left"><li class="divider">
+					<li><a href="https://dototot.com/about-us/">About Us</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/services/">Services</a></li>
+					<li class="divider">
+					<li><a href="https://dototot.com/our-work/">Our Work</a></li>
+					<li class="divider">
+					<li class="has-dropdown">
+						<a href="https://dototot.com/blog/">Blog & Tutorials</a>
+						<ul class="dropdown"><li><label>Categories</label></li>
+								<li class="cat-item cat-item-38"><a href="https://dototot.com/animation/">Animation</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://dototot.com/business-marketing/">Business & Marketing</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://dototot.com/design/">Design</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://dototot.com/et-cetera/">Et cetera</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="https://dototot.com/news/">News</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://dototot.com/programming/">Programming</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://dototot.com/puppets/">Puppets</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://dototot.com/video-production/">Video Production</a>
+</li>
+						</ul></li>
+					<li class="divider">
+				</ul></section></nav></div>
+	<div class="off-canvas-wrap" data-offcanvas><div class="inner-wrap">
+		
+		<nav class="tab-bar show-for-small-only"><div class="left-small">
+				<a href="#mobile-nav" role="button" aria-expanded="true" aria-controls="mobile-nav" class="left-off-canvas-toggle menu-icon">
+					<span></span>
+				</a>
+			</div>
+			<div class="right tab-bar-section">
+				<h1 class="title">
+					<a href="http://dototot.com/">
+						Dototot -
+						Engaging education					</a>
+				</h1>
+			</div>
+		</nav><nav class="left-off-canvas-menu" id="mobile-nav"><ul class="off-canvas-list"><li><label>Look Around</label></li>
+			</ul><ul id="menu-navigation" class="off-canvas-list"><li id="menu-item-2487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-2487"><a href="https://dototot.com/">Home</a></li>
+<li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2483"><a href="https://dototot.com/blog/">Blog</a></li>
+<li id="menu-item-2484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://dototot.com/services/">Our Services</a></li>
+<li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2485"><a href="https://dototot.com/our-work/">Our Work</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://dototot.com/about-us/">About Us</a></li>
+</ul><ul class="off-canvas-list"><li><label>Connect with us!</label></li>
+				<li>
+					<a class="rss" href="https://dototot.com/feed/" rel="nofollow" target="_blank">
+						<i class="fa fa-rss fa-fw"></i> RSS Feed
+					</a>
+				</li>
+				<li>
+					<a class="twitter" href="https://twitter.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-twitter fa-fw"></i> Twitter
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="http://www.youtube.com/dotototdotcom" rel="nofollow" target="_blank">
+						<i class="fa fa-youtube fa-fw"></i> YouTube
+					</a>
+				</li>
+				<li>
+					<a class="facebook" href="http://www.facebook.com/dototot" rel="nofollow" target="_blank">
+						<i class="fa fa-facebook fa-fw"></i> Facebook
+					</a>
+				</li>
+				<li><label>Do a something search</label></li>
+			</ul><form class="searchform" action="http://PLACEHOLDER.wpsho/" method="get">
+	<div class="row collapse">
+		<div class="medium-12 columns">
+			<input type="search" name="s" value="" placeholder="Search Dototot…"></div>
+		<div class="medium-4 columns">
+			<button type="submit" title="Submit Search Query" class="button alert expand">
+				<i class="fa fa-search fa-fw"></i>
+			</button>
+		</div>
+	</div>
+</form>
+		</nav><a class="exit-off-canvas"></a>
+		
+		<div class="row" id="main-wrap">
+			<div id="main" class="medium-11 large-12 columns">
+
+	<article class="post-1057 post type-post status-publish format-standard has-post-thumbnail hentry category-programming tag-python tag-social-media"><header class="post-header"><img width="955" height="514" src="https://dototot.com/app/uploads/2013/11/guidoTwitterBot_final1-1-955x514.jpg" class="attachment-post-header size-post-header wp-post-image" alt="How To Write a Twitter Bot with Python and tweepy" title="How To Write a Twitter Bot with Python and tweepy"><h1><span><span>How To Write a Twitter Bot with Python and tweepy</span></span></h1>
+	</header><div class="content-box">
+			
+				<p>Twitter is <em>the</em> social media site for robots. You probably have robot friends and followers and don’t even realize it! In this tutorial, you will write your own Twitter bot with Python and tweepy, and then set it loose in the world.</p>
+<p>First we need to create a Twitter Application. Go to <a href="https://dev.twitter.com/" target="_blank">https://dev.twitter.com/</a> and log in with your Twitter account.</p>
+<p style="text-align: center;"><img class="aligncenter  wp-image-1292" src="https://dototot.com/app/uploads/2013/11/20131126_twitterBot01-1.jpg" alt="Creating a new Twitter Application " width="265" height="142" srcset="https://dototot.com/app/uploads/2013/11/20131126_twitterBot01-1.jpg 700w, https://dototot.com/app/uploads/2013/11/20131126_twitterBot01-1-460x246.jpg 460w" sizes="(max-width: 265px) 100vw, 265px"></p>
+<p>Under your account toggle, select ‘My applications’. On the following screen, select the option to create a new application and fill in the required information.</p>
+<p><img class="aligncenter size-large wp-image-1293" src="https://dototot.com/app/uploads/2013/11/20131126_twitterBot02-1-920x815.jpg" alt="Settings tab in Twitter Application" width="784" height="695" srcset="https://dototot.com/app/uploads/2013/11/20131126_twitterBot02-1-920x815.jpg 920w, https://dototot.com/app/uploads/2013/11/20131126_twitterBot02-1-460x407.jpg 460w, https://dototot.com/app/uploads/2013/11/20131126_twitterBot02-1.jpg 960w" sizes="(max-width: 784px) 100vw, 784px"></p>
+<p>Once your new application is created, select its Settings tab and towards the bottom of the page click the ‘Read and Write’ radio button. Return to the Details tab and click the big blue button at the bottom of the page to generate your access keys.</p>
+<p>Next, we need to install tweepy. <a title="tweepy" href="https://github.com/tweepy/tweepy" target="_blank">tweepy</a> is the library we will be using to access the Twitter API with Python. From the command line, run:</p>
+<pre class="lang:sh decode:true" title="pip install tweepy">pip install tweepy</pre>
+<p>If you don’t have <a href="https://pypi.python.org/pypi/pip" target="_blank">pip</a> installed, run:</p>
+<pre class="lang:sh decode:true" title="sudo apt-get install python-pip">sudo apt-get install python-pip</pre>
+<p>Now it’s time to make our robot. Open your favorite text editor or IDE and create a new file (don’t use a word processor; it will load your file with unnecessary junk). Save it as <strong>helloworld.py</strong></p>
+<p>Below is our complete code. Enter your Twitter application keys and tokens accordingly:</p>
+<pre class="lang:python decode:true" title="helloworld.py">#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import tweepy, time, sys
+
+argfile = str(sys.argv[1])
+
+#enter the corresponding information from your Twitter application:
+CONSUMER_KEY = '1234abcd...'#keep the quotes, replace this with your consumer key
+CONSUMER_SECRET = '1234abcd...'#keep the quotes, replace this with your consumer secret key
+ACCESS_KEY = '1234abcd...'#keep the quotes, replace this with your access token
+ACCESS_SECRET = '1234abcd...'#keep the quotes, replace this with your access token secret
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+api = tweepy.API(auth)
+
+filename=open(argfile,'r')
+f=filename.readlines()
+filename.close()
+
+for line in f:
+    api.update_status(line)
+    time.sleep(900)#Tweet every 15 minutes</pre>
+<p>That’s our robot. But it’s hungry. Let’s feed it! Create a new text file in the same directory as helloworld.py. Save it as <strong>helloworld.txt</strong>. Enter a few memorable lines, such as:</p>
+<blockquote><p>Hello World!<br>
+I’m a robot!<br>
+Robots are superior to humans in every conceivable way!</p></blockquote>
+<p>Be sure to use lots of exclamation points so your robot can be heard. Twitter is a noisy place. Also be sure there are no blank lines in-between your lines of text. Our robot is not an <a title="Existentialism" href="http://en.wikipedia.org/wiki/Existentialism" target="_blank">existentialist.</a></p>
+<p>Now we’re ready to go! At the command line enter:</p>
+<pre class="lang:sh decode:true" title="python helloworld.py helloworld.txt">python helloworld.py helloworld.txt</pre>
+<p>Check your Twitter feed and you should see:</p>
+<blockquote><p>Hello World!</p></blockquote>
+<p>Let’s break that down into byte sized pieces.</p>
+<p>Our first line of Python,</p>
+<pre class="lang:python decode:true">import tweepy, time, sys</pre>
+<p>includes the three packages we need for our program: tweepy, time & sys. We already know what <em>tweepy</em> is for. <em>time</em> will allow us to schedule intervals between our Tweets (so we don’t get in trouble with Twitter), and <em>sys</em> will allow us to feed our robot a file for it to read and Tweet.</p>
+<p>The next line is how we feed the file to our robot.</p>
+<pre class="lang:python decode:true">argfile = str(sys.argv[1])</pre>
+<p>We’re assigning our text file to <em>argfile</em>. No, not arg as in the sound a pirate makes, but arg as in short for argument. When we run our program from the command line, we are passing the python interpreter two arguments, the first argument, <em>argv[0]</em>, is our .py file, <strong>helloworld.py</strong>; the second argument, <em>argv[1]</em>, is our text file, <strong>helloworld.tx</strong>t. What we are saying here is that <em>argfile</em> contains the string, <em>helloworld.txt</em>.</p>
+<p>The next big chunk of code is how we connect our robot to Twitter through our Application:</p>
+<pre class="lang:python decode:true">CONSUMER_KEY = 'YOUR CONSUMER KEY'
+CONSUMER_SECRET = 'YOUR CONSUMER SECRET KEY'
+ACCESS_KEY = 'YOUR ACCESS KEY'
+ACCESS_SECRET = 'YOUR ACCESS SECRET KEY'
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+api = tweepy.API(auth)</pre>
+<p>Here we are creating a variable, <em>auth</em>, and via tweepy, we are authorizing our account with our consumer and access keys. We then create a variable, <em>api</em>, and via tweepy connect to the Twitter API with <em>auth</em>.</p>
+<p>After that, we open and read the helloworld.txt file:</p>
+<pre class="lang:python decode:true">filename=open(argfile,'r')
+f=filename.readlines()
+filename.close()</pre>
+<p>Here we’re using the <em>open()</em> function to read <em>argfile</em>, which you will recall is holding the string <em>helloworld.txt</em>. We read the file with the parameter, <em>‘r’</em>, for read. Next we read the lines of our file and pass them to a variable called <em>f</em>, for file. Finally, we close the file. Closing something you’ve opened is a good habit. Like the refrigerator.</p>
+<p>The last block of code is where the magic happens:</p>
+<pre class="lang:python decode:true ">for line in f:
+    api.update_status(status=line)
+    time.sleep(900)#Tweet every 15 minutes</pre>
+<p>Using a <em>for</em> loop, we iterate through every line stored in <em>f</em>. For each <em>line</em>, we send out a Tweet using <em>api.update_status(line)</em>. Then we tell our robot to snooze with <em>time.sleep(900)</em>. The <em>for</em> loop will continue until it reads and Tweets the last <em>line</em> in <em>f</em>(or finds an error in your file), and will then exit.</p>
+<p>That’s it! Keep in mind there are <a title="Twitter Best Practices" href="https://support.twitter.com/articles/68916-following-rules-and-best-practices#" target="_blank">best practices</a> to be followed on Twitter. You will want to check before you modify this code or you risk getting your account suspended. And that’s no fun for you or your robot.</p>
+<p>Special thanks to <a href="http://emerging.commons.gc.cuny.edu/2013/10/making-twitter-bot-python-tutorial/">robincamille</a> for writing the post that inspired this tutorial.</p>
+
+													<div class="post-tags">
+						<p>
+																								<a class="label info" href="https://dototot.com/programming/">
+										<i class="fa fa-tag fa-fw"></i>
+										Programming									</a>
+																																							<a class="label info" href="https://dototot.com/tag/python/">
+										<i class="fa fa-tag fa-fw"></i>
+										Python									</a>
+																	<a class="label info" href="https://dototot.com/tag/social-media/">
+										<i class="fa fa-tag fa-fw"></i>
+										Social Media									</a>
+																					</p>
+					</div>
+									</div>
+
+		<div class="section-title">Become a GNU/Linux Superuser!</div>
+<div class="content-box">
+<div class="row">
+	<div class="large-8 columns text-center">
+		<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-sDfn74sNOGE" style="max-width:915px;" itemscope itemtype="http://schema.org/VideoObject"><div class="arve-embed-container" style="padding-bottom:56.250000%"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="arve-iframe fitvidsignore" frameborder="0" name sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/sDfn74sNOGE?iv_load_policy=3&modestbranding=1&rel=0&autohide=1&playsinline=1&autoplay=0" width="480" height="270"></iframe></div></div>	</div>
+	<div class="large-8 columns">
+		<p>Master the commands and structure of the fastest-growing computer operating system, Linux. Join super friends Adelie the penguin and Aramis the gnu on surreal adventures in the file tree. Learn the essential commands you need to take greater control of your computer in <em>Superusers: The Legendary GNU/Linux Show</em>.</p>
+		<a href="https://gumroad.com/l/superusers" class="button large primary expand no-bottom-margin">
+			<i class="fa fa-shopping-cart fa-fw"></i>			
+			Get It Now!
+		</a>
+	</div>
+</div>
+</div>
+				<div class="section-title">About the Author</div>
+		<div class="content-box">
+			<div class="row">
+				<div class="medium-6 large-4 columns">
+					<p class="hidden-for-small-only no-bottom-margin"><a href="https://dototot.com/author/jared/">
+						<img src="https://dototot.com/app/uploads/2015/04/jared_avatar_square-300x300.jpg" width="250" height="250" alt="Jared" class="avatar avatar-250 wp-user-avatar wp-user-avatar-250 alignnone photo"></a></p>
+				</div>
+				<div class="medium-10 large-12 columns">
+					<p>
+						<em>How To Write a Twitter Bot with Python and tweepy</em>
+						was posted by <a href="https://dototot.com/author/jared/" title="Posts by Jared" rel="author">Jared</a>						on <time datetime="2013-11-27" itemprop="datePublished">November 27th, 2013</time>.
+						Jared is one half of the creative force behind Dototot. In addition to writing scripts and tutorials, he draws and animates both the digital and the analog.					</p>
+					<p>
+						Discuss this article in the
+						<a href="#discussion"><i class="fa fa-comments"></i> Comments</a> below, or
+												<a class="twitter-share" target="_blank" rel="nofollow" href="https://twitter.com/share?text=How+To+Write+a+Twitter+Bot+with+Python+and+tweepy&url=http%3A%2F%2Fgoo.gl%2FlcT7gP&via=dotototdotcom">
+							<i class="fa fa-twitter-square"></i>
+							tweet
+						</a>
+						and
+												<a class="facebook-share" target="_blank" rel="nofollow" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fdototot.test%2Fhow-to-write-a-twitter-bot-with-python-and-tweepy%2F">
+							<i class="fa fa-facebook-square"></i>
+							share
+						</a>
+						it with your friends.
+					</p>
+				</div>
+			</div>
+		</div>
+
+					<div class="section-title">Recommended for you</div>
+			<article id="recommended" class="content-box"><div class="yarpp-related">
+	<ul class="small-block-grid-2 large-block-grid-4 recommended-posts"><li>
+					<a href="https://dototot.com/reply-tweets-python-tweepy-twitter-bot/" title="How To Reply to Tweets with a Python Twitter Bot using Tweepy">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/05/02_mockingbirds1-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of How To Reply to Tweets with a Python Twitter Bot using Tweepy" title="How To Reply to Tweets with a Python Twitter Bot using Tweepy"><span>How To Reply to Tweets…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/write-twitter-bot-python-tweepy-tweet-list-users/" title="Write a Twitter Bot with Python and Tweepy To Tweet a Message to a List of Users">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/05/08_Black-billed_Cuckoo1-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Write a Twitter Bot with Python and Tweepy To Tweet a Message to a List of Users" title="Write a Twitter Bot with Python and Tweepy To Tweet a Message to a List of Users"><span>Write a Twitter Bot with…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/write-twitter-bot-python-tweepy-follow-new-followers/" title="Write a Twitter Bot with Python Tweepy to Follow New Followers">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/09/20140908_twitterbot_follow1-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Write a Twitter Bot with Python Tweepy to Follow New Followers" title="Write a Twitter Bot with Python Tweepy to Follow New Followers"><span>Write a Twitter Bot with…</span>
+					</a>
+				</li>
+												<li>
+					<a href="https://dototot.com/write-twitter-bot-python-tweepy-unfollow-non-followers-command-line/" title="Write a Twitter Bot with Python tweepy to Unfollow Non-Followers from the Command Line">
+						<img width="300" height="300" src="https://dototot.com/app/uploads/2014/05/08_Black-billed_Cuckoo1-300x300.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Thumbnail of Write a Twitter Bot with Python tweepy to Unfollow Non-Followers from the Command Line" title="Write a Twitter Bot with Python tweepy to Unfollow Non-Followers from the Command Line"><span>Write a Twitter Bot with…</span>
+					</a>
+				</li>
+						</ul></div>
+			</article></article></div>
+							<aside id="sidebar" class="medium-5 large-4 columns"><div id="logo" class="hide-for-small-only">
+	<a href="http://dototot.com/" rel="nofollow">
+		<img src="https://dototot.com/app/themes/dototot/img/logo.svg"></a>
+	<p>
+		<em>Inspiring and empowering learners to produce
+		professional media with free and open source software.</em>
+		<small>(<a href="https://dototot.com/about-us/">more about us…</a>)</small>
+	</p>
+	<hr></div>
+<ul class="small-block-grid-1"><li id="advads_ad_widget-2" class="widget dotot-widget"><figure class="text-center"><a href="https://gum.co/daisy">
+		<img src="https://dototot.com/app/uploads/2015/05/daisy-web-dev.png" alt="Daisy's Web Dev Diary" title="Daisy's Web Dev Diary"></a>
+</figure><p>
+	<strong>Daisy's Web Development Diary: Learn HTML</strong> -
+	Learn how to build a game board with the table element, create forms for ordering sandwiches, link to exotic locations, and more. Begin your web programming journey today!
+</p>
+<a href="https://gum.co/daisy" class="button expand alert">
+	<i class="fa fa-shopping-cart fa-fw"></i>
+	Get It Now!
+</a></li>	</ul></aside></div>
+		<footer id="footer" class="row hide-for-small-only"><div class="small-8 small-offset-4 columns text-center">
+                <p>Dototot is a creative media company and think tank specializing in educational material. The contents of this website are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a></p>
+			</div>
+		</footer></div></div>
+
+	<link rel="stylesheet" id="advanced-responsive-video-embedder-css" href="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.css" type="text/css" media="all"><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/fastclick.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/vendor/placeholder.js"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/bower_components/foundation/js/foundation.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js?ver=1.5.8"></script><script type="text/javascript" src="https://dototot.com/app/themes/dototot/js/app.js"></script><script type="text/javascript" src="https://dototot.com/app/plugins/advanced-responsive-video-embedder/public/arve.js"></script></body></html>
