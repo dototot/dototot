@@ -1,0 +1,27 @@
+html {
+font-size: 1em;
+color: var(--body-font-color);
+font-weight: var(--body-font-weight);
+font-family: var(--body-font-family);
+line-height: 1.5em;
+box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: var(--color-black);
+}
+
+
+img {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
