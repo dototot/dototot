@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Dototot`,
+    description: `Engaging Education`,
+    author: `@dototot`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,11 +28,40 @@ module.exports = {
       },
     },
     {
-      resolve:`gatsby-plugin-postcss`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0, importFrom: 'src/styles/variables.css' })]
-      }
-    }
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              tracedSVG: true,
+              maxWidth: 1000,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `pages`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-preset-env`)({
+            stage: 0,
+            importFrom: "src/styles/variables.css",
+          }),
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

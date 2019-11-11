@@ -25,14 +25,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className={css.layout}>
-        <header>
-          Dototot
-        </header>
+        <header>Dototot</header>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()} Dototot
         </footer>
       </div>
     </>
