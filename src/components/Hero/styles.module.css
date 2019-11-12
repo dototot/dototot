@@ -1,0 +1,19 @@
+.heading {
+  margin: 0 0 var(--column-gap) 0;
+  padding: 5%;
+  color: var(--color-white);
+  background: var(--color-blue);
+  margin-top: -0.5rem;
+}
+
+.hr {
+  border: 0;
+  height: 0.3rem;
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-red),
+    75%,
+    var(--color-purple) 75%
+  );
+}

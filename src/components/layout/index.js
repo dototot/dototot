@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import logoSvg from '../../images/logo.svg';
-import css from "./layout.module.css"
+import css from "./styles.module.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
         <header className={css.header}>
           <figure>
             <img src={logoSvg} alt={title} />
-            <figcaption>{title}</figcaption>
+            <figcaption>{title} &bull; Engaging Education</figcaption>
           </figure>
           <nav className={css.nav}>
             <ul>

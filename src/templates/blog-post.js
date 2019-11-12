@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
 
 import css from './blog-post.module.css';
@@ -37,10 +37,10 @@ export const query = graphql`
                 category
                 image {
                     childImageSharp {
-                        resize(width: 955, height: 520) {
+                        resize(width: 960, height: 520) {
                             src
                         }
-                        fluid(maxWidth: 955) {
+                        fluid(maxWidth: 960) {
                             ...GatsbyImageSharpFluid_tracedSVG
                         }
                     }
