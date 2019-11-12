@@ -41,25 +41,35 @@
   }
 }
 
+.topBar {
+  border: 0;
+  height: 0.3rem;
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-red),
+    75%,
+    var(--color-purple) 75%
+  );
+}
+
+.bottomBar {
+  border: 0;
+  height: 0.3rem;
+  margin: 1.5rem 0;
+  background: linear-gradient(
+    to right,
+    var(--color-red),
+    25%,
+    var(--color-purple) 25%
+  );
+}
+
 .footer {
   padding-bottom: 1.5rem;
   text-align: center;
   font-style: italic;
   font-size: smaller;
-
-  &::before {
-    content: "";
-    display: block;
-    height: 1px;
-    margin: 1.5rem 0;
-    opacity: 0.25;
-    background: linear-gradient(
-      to right,
-      var(--color-red),
-      var(--color-green),
-      var(--color-blue)
-    );
-  }
 
   & img {
     vertical-align: middle;

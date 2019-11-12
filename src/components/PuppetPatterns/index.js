@@ -40,35 +40,15 @@ const PuppetPatterns = () => {
     <div className={css.puppetPatterns}>
       <div>
         <Img fluid={data.pythonImg.childImageSharp.fluid} />
-        <h3>Python Puppet Pattern</h3>
-        <p>
-          Craft your own fleece and foam character with our complete,
-          ready-to-print python puppet pattern.
-        </p>
       </div>
       <div>
         <Img fluid={data.penguinImg.childImageSharp.fluid} />
-        <h3>Penguin Puppet Pattern</h3>
-        <p>
-          Craft your own fleece and foam character with our complete,
-          ready-to-print penguin puppet pattern.
-        </p>
       </div>
       <div>
         <Img fluid={data.gnuImg.childImageSharp.fluid} />
-        <h3>GNU Puppet Pattern</h3>
-        <p>
-          Craft your own fleece and foam character with our complete,
-          ready-to-print GNU puppet pattern.
-        </p>
       </div>
       <div>
         <Img fluid={data.foxImg.childImageSharp.fluid} />
-        <h3>Fox Puppet Pattern</h3>
-        <p>
-          Craft your own fleece and foam character with our complete,
-          ready-to-print fox puppet pattern.
-        </p>
       </div>
     </div>
   )

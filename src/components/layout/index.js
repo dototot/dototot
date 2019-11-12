@@ -31,7 +31,9 @@ const Layout = ({ children }) => {
             </ul>
           </nav>
         </header>
+        <hr className={css.topBar} />
         <main>{children}</main>
+        <hr className={css.bottomBar} />
         <footer className={css.footer}>
           <p>
             Dototot is a creative media company and think tank specializing in

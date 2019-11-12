@@ -3,16 +3,22 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 import Hero from "../components/Hero"
+import SectionHeading from '../components/SectionHeading'
+import VideoSeries from '../components/VideoSeries'
 import PuppetPatterns from "../components/PuppetPatterns"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Dototot" />
     <Hero />
-    <h3>
+    <SectionHeading>
+      Learn computer science, programming, and web development with educational <em>super friends</em>.
+    </SectionHeading>
+    <VideoSeries />
+    <SectionHeading>
       Craft your own fleece and foam character with our complete, ready-to-print
-      python puppet pattern.
-    </h3>
+      puppet patterns.
+    </SectionHeading>
     <PuppetPatterns />
   </Layout>
 )

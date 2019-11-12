@@ -32,16 +32,15 @@ const Hero = () => {
   `)
   return (
     <>
-      <hr className={css.hr} />
       <Slider>
         <Img fluid={data.slide1.childImageSharp.fluid} />
         <Img fluid={data.slide2.childImageSharp.fluid} />
         <Img fluid={data.slide3.childImageSharp.fluid} />
       </Slider>
-      <h1 className={css.heading}>
+      {/* <h1 className={css.heading}>
         Inspiring and empowering learners to produce professional media with
         free and open source software&hellip;
-      </h1>
+      </h1> */}
     </>
   )
 }
