@@ -1,16 +1,22 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Layout from '../components/layout/main';
-import { useStaticQuery, graphql } from 'gatsby';
+import Layout from '../components/layout';
+import { graphql } from 'gatsby';
+
+import css from './blog-post.module.css';
 
 function BlogPost({ data }) {
     const post = data.markdownRemark;
     return (
         <Layout>
             <article>
-                <header>
+                <header className={css.header}>
                     <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                     <h1>{post.frontmatter.title}</h1>
+                    <ul>
+                        <li className="capitalize">{post.frontmatter.category}</li>
+                        <li>By {post.frontmatter.author}</li>
+                    </ul>
                 </header>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </article>
@@ -27,6 +33,8 @@ export const query = graphql`
             excerpt
             frontmatter {
                 title
+                author
+                category
                 image {
                     childImageSharp {
                         resize(width: 955, height: 520) {

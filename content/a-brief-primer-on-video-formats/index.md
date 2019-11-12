@@ -1,7 +1,10 @@
 ---
 title: A Brief Primer on Video Formats
+date: "2019-11-12"
+author: "Jay Nielsen"
 image: vidformats.jpg
-description: Video formats are terribly important for video editors to understand. They are also incredibly boring. So I’ll be as brief as I can while hitting the major points you should familiarize yourself with. Lets start with a dash of history.
+description: Video formats are terribly important for video editors to understand. They are also incredibly boring. So I’ll be as brief as I can while hitting the major points you should familiarize yourself with.
+category: "tutorial"
 ---
 
 Video formats are terribly important for video editors to understand. They are also incredibly boring. So I’ll be as brief as I can while hitting the major points you should familiarize yourself with. Lets start with a dash of history. NTSC was the analog standard for broadcast television in most of North and South America. Other popular formats from around the world that you may encounter include PAL and SECAM. Now that digital broadcasting is all the rage, it’s not terribly important for you to understand these. You will, however, undoubtedly see it mentioned in various editing programs. NTSC makes an appearance in the Lightworks project settings, and is referring to the frame size. The width of an NTSC video is 720 pixels, and the height is 480 pixels. 16:9 and 4:3 are the pixel aspect ratio and translate to “widescreen” and “full screen” respectively. But this is the two thousands, so you’re probably all about high definition video, no?

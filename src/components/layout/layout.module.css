@@ -1,0 +1,72 @@
+.layout {
+  max-width: calc(var(--layout-width) + var(--column-gap) * 2);
+  padding: 0 var(--column-gap);
+  margin: 0 auto;
+}
+
+.header {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & figure {
+    font-size: 1.25rem;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+
+    & img {
+      height: 1.5em;
+      width: auto;
+      margin-right: 0.5rem;
+    }
+
+    & figcaption {
+      line-height: 1;
+    }
+  }
+}
+
+.nav {
+  & ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  & li {
+    margin-left: 1rem;
+  }
+}
+
+.footer {
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 1.5rem 0;
+    opacity: 0.25;
+    background: linear-gradient(
+      to right,
+      var(--color-red),
+      var(--color-green),
+      var(--color-blue)
+    );
+  }
+
+  & img {
+    vertical-align: middle;
+  }
+
+  & p {
+    margin: 0 20%;
+  }
+}

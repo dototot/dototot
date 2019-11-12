@@ -1,27 +1,41 @@
 html {
-font-size: 1em;
-color: var(--body-font-color);
-font-weight: var(--body-font-weight);
-font-family: var(--body-font-family);
-line-height: 1.5em;
-box-sizing: border-box;
+  font-size: 1em;
+  color: var(--color-black);
+  font-weight: var(--body-font-weight);
+  font-family: var(--body-font-family);
+  line-height: 1.5em;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    color: var(--color-black);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-family: ;
 }
 
-
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--header-font-weight);
+}
+
+a {
+  color: var(--color-blue);
 }

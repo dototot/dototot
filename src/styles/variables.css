@@ -1,8 +1,17 @@
 :root {
-    --layout-width: 75rem;
+  /* Layout & Spacing */
+  --layout-width: 60rem;
+  --column-gap: 1rem;
 
-    --color-red: #ff007f;
-    --color-green: #00ff7f;
-    --color-blue: #007fff;
-    --color-black: #444;
+  /* Colors */
+  --color-red: #ff007f;
+  --color-green: #00ff7f;
+  --color-blue: #007fff;
+  --color-black: #444;
+  --color-white: #fcfcfc;
+
+  /* Typography */
+  --body-font-family: "Open Sans", sans-serif;
+  --body-font-weight: 400;
+  --header-font-weight: 200;
 }
