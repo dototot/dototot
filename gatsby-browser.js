@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 import "normalize.css"
 import "typeface-open-sans"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import "./src/styles/variables.css"
 import "./src/styles/global.css"

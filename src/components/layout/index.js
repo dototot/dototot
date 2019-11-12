@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import logoSvg from '../../images/logo.svg';
+import logoSvg from "../../images/logo.svg"
 import css from "./styles.module.css"
 
 const Layout = ({ children }) => {
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  const { title } = data.site.siteMetadata;
+  const { title } = data.site.siteMetadata
   return (
     <>
       <div className={css.layout}>
@@ -34,11 +34,22 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer className={css.footer}>
           <p>
-            Dototot is a creative media company and think tank specializing in educational material. The contents of this website are licensed under a
-            {' '}
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blankt" rel="nofollow noopener">CC BY-NC-SA 4.0 License</a>.
-            {' '}
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blankt" rel="nofollow noopener">
+            Dototot is a creative media company and think tank specializing in
+            educational material. The contents of this website are licensed
+            under a{" "}
+            <a
+              href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+              target="_blankt"
+              rel="nofollow noopener"
+            >
+              CC BY-NC-SA 4.0 License
+            </a>
+            .{" "}
+            <a
+              href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+              target="_blankt"
+              rel="nofollow noopener"
+            >
               <img src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" />
             </a>
           </p>
