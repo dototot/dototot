@@ -31,6 +31,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-remark-copy-linked-files',
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -38,7 +39,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               tracedSVG: true,
-              maxWidth: 1000,
+              maxWidth: 960,
             },
           },
         ],

@@ -1,9 +1,8 @@
 ---
 title: A Brief Primer on Video Formats
-date: "2019-11-12"
+date: "2013-11-12"
 author: "Jay Nielsen"
 image: vidformats.jpg
-description: Video formats are terribly important for video editors to understand. They are also incredibly boring. So I’ll be as brief as I can while hitting the major points you should familiarize yourself with.
 category: "tutorial"
 ---
 
