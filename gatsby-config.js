@@ -33,6 +33,16 @@ module.exports = {
         plugins: [
           'gatsby-remark-copy-linked-files',
           {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              prompt: {
+                global: true,
+                user: 'dot',
+                host: 'ot'
+              }
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
