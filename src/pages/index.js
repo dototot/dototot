@@ -3,8 +3,8 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 import Hero from "../components/Hero"
-import SectionHeading from '../components/SectionHeading'
-import VideoSeries from '../components/VideoSeries'
+import SectionHeading from "../components/SectionHeading"
+import VideoSeries from "../components/VideoSeries"
 import PuppetPatterns from "../components/PuppetPatterns"
 
 const IndexPage = () => (
@@ -12,7 +12,8 @@ const IndexPage = () => (
     <SEO title="Dototot" />
     <Hero />
     <SectionHeading>
-      Learn computer science, programming, and web development with educational <em>super friends</em>.
+      Learn computer science, programming, and web development with your
+      educational <em>super friends</em>.
     </SectionHeading>
     <VideoSeries />
     <SectionHeading>

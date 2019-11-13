@@ -3,7 +3,7 @@ html {
   color: var(--color-black);
   font-weight: var(--body-font-weight);
   font-family: var(--body-font-family);
-  line-height: 1.5em;
+  line-height: 1.75em;
   box-sizing: border-box;
 }
 

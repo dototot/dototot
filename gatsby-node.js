@@ -4,20 +4,18 @@ const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
-
   return new Promise((resolve, reject) => {
     resolve(
       graphql(`
         {
-          allMarkdownRemark(limit: 1000) {
+          allMarkdownRemark(
+            sort: { order: DESC, fields: [frontmatter___date] }
+            limit: 1000
+          ) {
             edges {
               node {
                 fields {
                   slug
-                }
-                frontmatter {
-                  title
                 }
               }
             }
@@ -29,15 +27,31 @@ exports.createPages = ({ actions, graphql }) => {
           return reject(result.errors)
         }
 
+        const posts = result.data.allMarkdownRemark.edges
         const blogTemplate = path.resolve("./src/templates/blog-post.js")
+        const categoryTemplate = path.resolve("./src/templates/category.js")
 
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        Object.entries({
+          tutorials: 'tutorial',
+          'puppet-patterns': 'puppet pattern',
+          'et-cetera': 'et cetera',
+        }).forEach(([path, category]) => {
+          createPage({
+            path,
+            component: categoryTemplate,
+            context: {
+              category,
+            },
+          })
+        })
+
+        posts.forEach(({ node }, index) => {
           createPage({
             path: node.fields.slug,
             component: blogTemplate,
             context: {
               slug: node.fields.slug,
-            }, // additional data can be passed via context
+            },
           })
         })
         return

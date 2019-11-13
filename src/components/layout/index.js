@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import logoSvg from "../../images/logo.svg"
 import css from "./styles.module.css"
 
@@ -20,14 +20,28 @@ const Layout = ({ children }) => {
       <div className={css.layout}>
         <header className={css.header}>
           <figure>
-            <img src={logoSvg} alt={title} />
-            <figcaption>{title} &bull; Engaging Education</figcaption>
+            <Link to="/">
+              <img src={logoSvg} alt={title} />
+              <figcaption>{title} &bull; Engaging Education</figcaption>
+            </Link>
           </figure>
           <nav className={css.nav}>
             <ul>
-              <li>Puppet Patterns</li>
-              <li>Tutorials</li>
-              <li>Et Cetera</li>
+              <li>
+                <Link to="/puppet-patterns">
+                  Puppet Patterns
+                </Link>
+              </li>
+              <li>
+                <Link to="/tutorials">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link to="et-cetera">
+                  Et Cetera
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
