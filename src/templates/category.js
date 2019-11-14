@@ -16,7 +16,7 @@ export default IndexPage
 export const query = graphql`
   query CategoryQuery($category: String!) {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
       filter: { frontmatter: { category: { eq: $category } } }
     ) {
       edges {

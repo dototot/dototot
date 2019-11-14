@@ -1,6 +1,6 @@
 ---
 title: "How to Make a Puppet: Sewing & Assembling a Fox"
-date: "2015-08-26"
+date: "2015-08-24"
 author: "Jay Nielsen"
 image: "63-finished-fox-puppet.jpg"
 category: "puppet pattern"

@@ -1,6 +1,6 @@
 ---
 title: "How to Make a Puppet: Pattern & Materials for a Fox"
-date: "2015-08-24"
+date: "2015-08-22"
 author: "Jay Nielsen"
 image: puppet_tutorial_post_fox_landscape.png
 category: "puppet pattern"

@@ -1,6 +1,6 @@
 ---
 title: "How to Make a Puppet: Pattern & Materials for a Penguin"
-date: "2015-08-22"
+date: "2015-08-26"
 author: "Jared Nielsen"
 image: "puppet_ebook_cover_penguin_landscape.png"
 category: "puppet pattern"
