@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import PostGrid from '../components/PostGrid'
+import PostGrid from "../components/PostGrid"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (

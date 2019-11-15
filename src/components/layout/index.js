@@ -5,7 +5,7 @@ import logoSvg from "../../images/logo.svg"
 import css from "./styles.module.css"
 
 const Layout = ({ children }) => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -27,24 +27,16 @@ const Layout = ({ children }) => {
             </Link>
           </figure>
           <nav className={css.nav}>
-            <button onClick={() => setOpen(!isOpen)}>
-              Menu
-            </button>
+            <button onClick={() => setOpen(!isOpen)}>Menu</button>
             <ul className={isOpen ? css.open : css.closed}>
               <li>
-                <Link to="/puppet-patterns">
-                  Puppet Patterns
-                </Link>
+                <Link to="/puppet-patterns">Puppet Patterns</Link>
               </li>
               <li>
-                <Link to="/tutorials">
-                  Tutorials
-                </Link>
+                <Link to="/tutorials">Tutorials</Link>
               </li>
               <li>
-                <Link to="et-cetera">
-                  Et Cetera
-                </Link>
+                <Link to="et-cetera">Et Cetera</Link>
               </li>
             </ul>
           </nav>

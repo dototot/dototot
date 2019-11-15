@@ -31,16 +31,16 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          'gatsby-remark-copy-linked-files',
+          "gatsby-remark-copy-linked-files",
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: "gatsby-remark-prismjs",
             options: {
               prompt: {
                 global: true,
-                user: 'dot',
-                host: 'ot'
-              }
-            }
+                user: "dot",
+                host: "ot",
+              },
+            },
           },
           {
             resolve: `gatsby-remark-images`,

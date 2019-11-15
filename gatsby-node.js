@@ -32,9 +32,9 @@ exports.createPages = ({ actions, graphql }) => {
         const categoryTemplate = path.resolve("./src/templates/category.js")
 
         Object.entries({
-          tutorials: 'tutorial',
-          'puppet-patterns': 'puppet pattern',
-          'et-cetera': 'et cetera',
+          tutorials: "tutorial",
+          "puppet-patterns": "puppet pattern",
+          "et-cetera": "et cetera",
         }).forEach(([path, category]) => {
           createPage({
             path,

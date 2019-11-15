@@ -11,7 +11,12 @@ function BlogPost({ data }) {
     <Layout>
       <article>
         <header className={css.header}>
-          <Img sizes={{ ...post.frontmatter.image.childImageSharp.fluid, aspectRatio: 960 / 520 }} />
+          <Img
+            sizes={{
+              ...post.frontmatter.image.childImageSharp.fluid,
+              aspectRatio: 960 / 520,
+            }}
+          />
           <h1>{post.frontmatter.title}</h1>
           <ul>
             <li className="capitalize">{post.frontmatter.category}</li>
