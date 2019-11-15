@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import logoSvg from "../../images/logo.svg"
 import css from "./styles.module.css"
 
 const Layout = ({ children }) => {
+  const [isOpen, setOpen] = useState(false);
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -26,7 +27,10 @@ const Layout = ({ children }) => {
             </Link>
           </figure>
           <nav className={css.nav}>
-            <ul>
+            <button onClick={() => setOpen(!isOpen)}>
+              Menu
+            </button>
+            <ul className={isOpen ? css.open : css.closed}>
               <li>
                 <Link to="/puppet-patterns">
                   Puppet Patterns

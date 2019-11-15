@@ -18,3 +18,8 @@
   --body-font-weight: 400;
   --header-font-weight: 200;
 }
+
+/* Breakpoints
+-------------- */
+@custom-media --small-viewport screen and (min-width: 600px);
+@custom-media --medium-viewport screen and (min-width: 800px);

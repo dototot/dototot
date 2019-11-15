@@ -1,10 +1,15 @@
 .posts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: var(--column-gap);
   margin: var(--column-gap) 0;
 
   & article > *:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (--small-viewport) {
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--column-gap);
   }
 }
