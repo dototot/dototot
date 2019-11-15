@@ -1,5 +1,11 @@
 .puppetPatterns {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: var(--column-gap);
+}
+
+@media (--small-viewport) {
+  .puppetPatterns {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

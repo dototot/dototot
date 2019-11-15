@@ -7,7 +7,7 @@ const PostGrid = ({ edges }) => (
     <div className={css.posts}>
         {edges.map(({ node }) => (
             <article key={node.fields.slug}>
-                <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                <Img sizes={{ ...node.frontmatter.image.childImageSharp.fluid, aspectRatio: 960 / 520 }} />
                 <h2>{node.frontmatter.title}</h2>
                 <p>{node.excerpt}</p>
                 <Link to={node.fields.slug}>

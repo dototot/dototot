@@ -11,7 +11,7 @@ function BlogPost({ data }) {
     <Layout>
       <article>
         <header className={css.header}>
-          <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+          <Img sizes={{ ...post.frontmatter.image.childImageSharp.fluid, aspectRatio: 960 / 520 }} />
           <h1>{post.frontmatter.title}</h1>
           <ul>
             <li className="capitalize">{post.frontmatter.category}</li>
@@ -37,9 +37,6 @@ export const query = graphql`
         category
         image {
           childImageSharp {
-            resize(width: 960, height: 520) {
-              src
-            }
             fluid(maxWidth: 960) {
               ...GatsbyImageSharpFluid_tracedSVG
             }

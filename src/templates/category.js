@@ -29,10 +29,7 @@ export const query = graphql`
             title
             image {
               childImageSharp {
-                resize(width: 470, height: 240) {
-                  src
-                }
-                fluid(maxWidth: 960) {
+                fluid(maxWidth: 470) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }

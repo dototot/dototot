@@ -1,9 +1,16 @@
 .videoSeries {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: var(--column-gap);
 
   & p {
     text-align: justify;
+    margin: 0;
+  }
+}
+
+@media (--small-viewport) {
+  .videoSeries {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
