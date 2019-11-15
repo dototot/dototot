@@ -2,7 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-
+import SectionHeading from '../components/SectionHeading'
+import PuppetPatterns from "../components/PuppetPatterns";
 import css from "./blog-post.module.css"
 
 function BlogPost({ data }) {
@@ -17,13 +18,16 @@ function BlogPost({ data }) {
               aspectRatio: 960 / 520,
             }}
           />
-          <h1>{post.frontmatter.title}</h1>
-          <ul>
-            <li className="capitalize">{post.frontmatter.category}</li>
-            <li>By {post.frontmatter.author}</li>
-          </ul>
+          <div class={css.title}>
+            <h1>{post.frontmatter.title}</h1>
+            <ul>
+              <li className="capitalize">{post.frontmatter.category}</li>
+              <li>By {post.frontmatter.author}</li>
+            </ul>
+          </div>
         </header>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className={css.postContent} dangerouslySetInnerHTML={{ __html: post.html }} />
+        <PuppetPatterns />
       </article>
     </Layout>
   )

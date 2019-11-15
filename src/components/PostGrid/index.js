@@ -7,15 +7,23 @@ const PostGrid = ({ edges }) => (
   <div className={css.posts}>
     {edges.map(({ node }) => (
       <article key={node.fields.slug}>
-        <Img
-          sizes={{
-            ...node.frontmatter.image.childImageSharp.fluid,
-            aspectRatio: 960 / 520,
-          }}
-        />
-        <h2>{node.frontmatter.title}</h2>
-        <p>{node.excerpt}</p>
-        <Link to={node.fields.slug}>&hellip;read more</Link>
+        <Link to={node.fields.slug}>
+          <Img
+            sizes={{
+              ...node.frontmatter.image.childImageSharp.fluid,
+              aspectRatio: 960 / 520,
+            }}
+          />
+        </Link>
+        <h2>
+          <Link to={node.fields.slug}>
+            {node.frontmatter.title}
+          </Link>
+        </h2>
+        <p>
+          {node.excerpt}
+        </p>
+        <Link to={node.fields.slug}>continue reading &rarr;</Link>
       </article>
     ))}
   </div>

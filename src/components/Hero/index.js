@@ -32,10 +32,16 @@ const Hero = () => {
   `)
   return (
     <>
-      <Slider>
-        <Img fluid={data.slide1.childImageSharp.fluid} />
-        <Img fluid={data.slide2.childImageSharp.fluid} />
-        <Img fluid={data.slide3.childImageSharp.fluid} />
+      <Slider
+        pauseOnHover={false}
+        autoplay
+        fade
+        arrows={false}
+        autoplaySpeed={7000}
+      >
+        <Img sizes={{ ...data.slide1.childImageSharp.fluid, aspectRatio: 18 / 9 }} />
+        <Img sizes={{ ...data.slide2.childImageSharp.fluid, aspectRatio: 18 / 9 }} />
+        <Img sizes={{ ...data.slide3.childImageSharp.fluid, aspectRatio: 18 / 9 }} />
       </Slider>
       {/* <h1 className={css.heading}>
         Inspiring and empowering learners to produce professional media with
