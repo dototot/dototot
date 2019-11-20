@@ -1,5 +1,8 @@
 .posts {
   margin: var(--column-gap) 0;
+  display: grid;
+  grid-gap: var(--column-gap);
+  grid-template-columns: 1fr;
 
   & h2 a {
     color: inherit;
@@ -17,8 +20,6 @@
 
 @media (--small-viewport) {
   .posts {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: var(--column-gap);
   }
 }

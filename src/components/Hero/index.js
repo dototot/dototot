@@ -39,9 +39,15 @@ const Hero = () => {
         arrows={false}
         autoplaySpeed={7000}
       >
-        <Img sizes={{ ...data.slide1.childImageSharp.fluid, aspectRatio: 18 / 9 }} />
-        <Img sizes={{ ...data.slide2.childImageSharp.fluid, aspectRatio: 18 / 9 }} />
-        <Img sizes={{ ...data.slide3.childImageSharp.fluid, aspectRatio: 18 / 9 }} />
+        <Img
+          sizes={{ ...data.slide1.childImageSharp.fluid, aspectRatio: 18 / 9 }}
+        />
+        <Img
+          sizes={{ ...data.slide2.childImageSharp.fluid, aspectRatio: 18 / 9 }}
+        />
+        <Img
+          sizes={{ ...data.slide3.childImageSharp.fluid, aspectRatio: 18 / 9 }}
+        />
       </Slider>
       {/* <h1 className={css.heading}>
         Inspiring and empowering learners to produce professional media with

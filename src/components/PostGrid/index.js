@@ -16,13 +16,9 @@ const PostGrid = ({ edges }) => (
           />
         </Link>
         <h2>
-          <Link to={node.fields.slug}>
-            {node.frontmatter.title}
-          </Link>
+          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
         </h2>
-        <p>
-          {node.excerpt}
-        </p>
+        <p>{node.excerpt}</p>
         <Link to={node.fields.slug}>continue reading &rarr;</Link>
       </article>
     ))}
