@@ -22,8 +22,8 @@ mogrify -format png -gravity south -chop 0x25 *.png
 
 The `-format png` option states that I want my output file in the .png format. The `-gravity south` option states that I want the crop to start at the bottom of my image. The `-chop 0x25` states that I want to cut 25 pixels from the height. The `*.png` states that I want these actions to be applied to every .png file in the current directory. Below is my original file:
 
-![Screenshot from 2013-10-28 13:43:49](https://dototot.com/app/uploads/2013/10/Screenshot-from-2013-10-28-134349-1.jpg)
+![Screenshot from 2013-10-28 13:43:49](./Screenshot-from-2013-10-28-134349-1.jpg)
 
 And the freshly trimmed image:
 
-![20131028_imageMagickCropTutorial-1](https://dototot.com/app/uploads/2013/10/20131028_imageMagickCropTutorial-1-1.jpg)
+![20131028_imageMagickCropTutorial-1](./20131028_imageMagickCropTutorial-1-1.jpg)

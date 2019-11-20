@@ -12,7 +12,7 @@ category: "tutorial"
 
 This tutorial demonstrates how to create animated GIFs from a PNG sequence using ImageMagick and the command line on Linux. What you are seeing is a seizure inducing animation that we created for our series, [Superusers: The Legendary GNU/Linux Show](https://www.thehelloworldprogram.com/linux/), which I strongly encourage you to watch if you are interested in Linux, free open-source software, and the surreal.
 
-![#!](https://dototot.com/app/uploads/2015/03/shebang2.gif)
+![#!](./shebang2.gif)
 
 If you haven’t already, install ImageMagick:
 

@@ -12,19 +12,19 @@ Each individual frame will need to be drawn by hand. You can use a glass table, 
 
 When you are satisfied with your drawings, we can begin the scanning process. I recommend a nifty little program called [Simple Scan](https://launchpad.net/simple-scan). There’s a good chance it is either included with your Linux distribution, or available in the software repos. If not, any image scanning software will do. Open the Simple Scan preferences and ensure that the quality slider is set to maximum, and the resolution is set to a reasonably high value. Anything over 300 dpi is probably too extreme.
 
-![simple scan preferences](https://dototot.com/app/uploads/2014/09/scanimation1.jpg)
+![simple scan preferences](./scanimation1.jpg)
 
 Place the first frame of your animation on the scanner bed, and hit the scan button. You may need to rotate the resultant image in Simple Scan to get it oriented correctly. You may also wish to set a crop window, removing the excess scanner bed. It is not important that your crop be accurate, but it is important that you set it on the first frame and never adjust it again for the remainder of your scanning.
 
-![simple scan](https://dototot.com/app/uploads/2014/09/scanimation2.jpg)
+![simple scan](./scanimation2.jpg)
 
 Finish scanning each one of your frames one-by one until completion.
 
-![scanning animation frames](https://dototot.com/app/uploads/2014/09/scanning-animation-frames.jpg)
+![scanning animation frames](./scanning-animation-frames.jpg)
 
 When you are done, save the images to a folder of your choice, giving them a simple name such as “frame”. The rest of the process is very similar to how we [compiled a stop motion animation made with Entangle](https://dototot.com/compile-stop-motion-animation-image-sequence-avconv/ "How to Compile a Stop Motion Animation Image Sequence with avconv"). First we need to decide how to crop our video. The easiest way I’ve found to determine the crop parameters is with [Gimp](https://www.gimp.org/), so open any one of your frames in Gimp. With the crop tool selected, check the “Fixed” option and set it to “Aspect ratio”. For the sake of demonstration, I’m assuming we are going to output a 1080p video, so in the field just below the “Fixed” checkbox, enter “16:9”. Drag out a selection on the image for the crop you intend to use for your video, but don’t execute the crop.
 
-![determining crop parameters with gimp](https://dototot.com/app/uploads/2014/09/determining-crop-parameters-with-gimp.jpg)
+![determining crop parameters with gimp](./determining-crop-parameters-with-gimp.jpg)
 
 Put Gimp aside and navigate to the folder containing your scanned images via the command line. The time for compiling your animation is now!
 
