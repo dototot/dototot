@@ -38,21 +38,21 @@ Purchase, borrow, or otherwise scrounge together the following materials:
 - Fabric glue
 - Fox Puppet Pattern ([available for purchase on our Gumroad page](https://gum.co/fox-puppet))
 
-![01 - gather supplies](https://dototot.com/app/uploads/2015/08/01-gather-supplies.jpg)
+![01 - gather supplies](./01-gather-supplies.jpg)
 
 ## Prepare the printable puppet pattern
 
 Print out the complete fox puppet pattern available here: [gum.co/fox-puppet](https://gum.co/fox-puppet). Ensure that any automatic “page scaling” options for your printer have been disabled. The pattern is optimized for standard US letter 8.5 x 11 inch paper. Once it’s printed out, cut along the thick black lines.
 
-![02 - cut puppet pattern](https://dototot.com/app/uploads/2015/08/02-cut-puppet-pattern.jpg)
+![02 - cut puppet pattern](./02-cut-puppet-pattern.jpg)
 
 The dashed thick black lines indicate parts of the patten that need to be taped together.
 
-![03 - tape puppet pattern pieces together](https://dototot.com/app/uploads/2015/08/03-tape-puppet-pattern-pieces-together.jpg)
+![03 - tape puppet pattern pieces together](./03-tape-puppet-pattern-pieces-together.jpg)
 
 When everything is cut out and assembled, it’s time to move on to tracing the pattern.
 
-![04 - fox puppet pattern cut and ready](https://dototot.com/app/uploads/2015/08/04-fox-puppet-pattern-cut-and-ready.jpg)
+![04 - fox puppet pattern cut and ready](./04-fox-puppet-pattern-cut-and-ready.jpg)
 
 ## Trace and cut the fleece puppet patterns parts
 
@@ -61,64 +61,64 @@ Another thing to consider when tracing your pattern is the grain of the fabric. 
 
 Fold one side of the orange fabric over and line up the dotted edge of the body pattern along the fold. Trace the pattern with your marking tool of choice and cut through both layers with sewing sheers.
 
-![05 - align body pattern on fold](https://dototot.com/app/uploads/2015/08/05-align-body-pattern-on-fold.jpg)
+![05 - align body pattern on fold](./05-align-body-pattern-on-fold.jpg)
 
-![06 - trace fox puppet body pattern](https://dototot.com/app/uploads/2015/08/06-trace-fox-puppet-body-pattern.jpg)
+![06 - trace fox puppet body pattern](./06-trace-fox-puppet-body-pattern.jpg)
 
-![07 - cut out fox puppet body pattern](https://dototot.com/app/uploads/2015/08/07-cut-out-fox-puppet-body-pattern.jpg)
+![07 - cut out fox puppet body pattern](./07-cut-out-fox-puppet-body-pattern.jpg)
 
-![08 - fox body pattern cut out](https://dototot.com/app/uploads/2015/08/08-fox-body-pattern-cut-out.jpg)
+![08 - fox body pattern cut out](./08-fox-body-pattern-cut-out.jpg)
 
 Trace and cut both the ear and arm #1 pattern pieces twice.
 
-![08 - trace fox arm pattern](https://dototot.com/app/uploads/2015/08/08-trace-fox-arm-pattern.jpg)
+![08 - trace fox arm pattern](./08-trace-fox-arm-pattern.jpg)
 
 That’s all for orange fleece, so fold up the remainder and roll out the white. Locate the chest, face, and ear patterns, and begin by tracing the chest once.
 
-![09 - fox puppet chest pattern](https://dototot.com/app/uploads/2015/08/09-fox-puppet-chest-pattern.jpg)
+![09 - fox puppet chest pattern](./09-fox-puppet-chest-pattern.jpg)
 
 Then trace the face pattern once, flip it over, and trace it again. Don’t trace the same side twice or you’ll end up with a two-faced fox. The worst kind of fox.
 
-![10 - trace one side of fox face](https://dototot.com/app/uploads/2015/08/10-trace-one-side-of-fox-face.jpg)
+![10 - trace one side of fox face](./10-trace-one-side-of-fox-face.jpg)
 
-![11 - trace opposite side of face](https://dototot.com/app/uploads/2015/08/11-trace-opposite-side-of-face.jpg)
+![11 - trace opposite side of face](./11-trace-opposite-side-of-face.jpg)
 
 Now trace and cut the same ear piece that we used on the orange fabric twice.
 
-![12 - cut fox puppet ears](https://dototot.com/app/uploads/2015/08/12-cut-fox-puppet-ears.jpg)
+![12 - cut fox puppet ears](./12-cut-fox-puppet-ears.jpg)
 
 Continue cutting out the remaining white fleece pieces.
 
-![13 - cut remaining white pattern pieces](https://dototot.com/app/uploads/2015/08/13-cut-remaining-white-pattern-pieces.jpg)
+![13 - cut remaining white pattern pieces](./13-cut-remaining-white-pattern-pieces.jpg)
 
 Once you’ve cut and put away the white fleece, we can move on to the black. Locate the nose and arm #2 patterns. These parts can be tricky to trace if you’re using a marker, but it’s still doable. The nose piece, like the face pattern, needs to be traced, flipped over, and traced again.
 
-![14 - trace nose pattern](https://dototot.com/app/uploads/2015/08/14-trace-nose-pattern.jpg)
+![14 - trace nose pattern](./14-trace-nose-pattern.jpg)
 
-![15 - trace opposite nose pattern](https://dototot.com/app/uploads/2015/08/15-trace-opposite-nose-pattern.jpg)
+![15 - trace opposite nose pattern](./15-trace-opposite-nose-pattern.jpg)
 
 Trace the arm #2 pattern twice and cut out all of the black pieces.
 
-![16 - trace arm pattern](https://dototot.com/app/uploads/2015/08/16-trace-arm-pattern.jpg)
+![16 - trace arm pattern](./16-trace-arm-pattern.jpg)
 
 ## Trace and cut the puppet mouth patterns
 
 That’s it for fleece, lets move on to the mouth patterns. Trace and cut the red felt pattern, the two stiffened felt patterns, and the foam sheeting pattern.
 
-![17 - trace felt puppet mouth pattern](https://dototot.com/app/uploads/2015/08/17-trace-felt-puppet-mouth-pattern.jpg)
+![17 - trace felt puppet mouth pattern](./17-trace-felt-puppet-mouth-pattern.jpg)
 
-![18 - trace stiffened felt puppet mouth pattern](https://dototot.com/app/uploads/2015/08/18-trace-stiffened-felt-puppet-mouth-pattern.jpg)
+![18 - trace stiffened felt puppet mouth pattern](./18-trace-stiffened-felt-puppet-mouth-pattern.jpg)
 
-![19 - trace foam puppet mouth pattern](https://dototot.com/app/uploads/2015/08/19-trace-foam-puppet-mouth-pattern.jpg)
+![19 - trace foam puppet mouth pattern](./19-trace-foam-puppet-mouth-pattern.jpg)
 
-![20 - cut foam puppet mouth pattern](https://dototot.com/app/uploads/2015/08/20-cut-foam-puppet-mouth-pattern.jpg)
+![20 - cut foam puppet mouth pattern](./20-cut-foam-puppet-mouth-pattern.jpg)
 
 ## Trace and cut the puppet rod pockets
 
 Using a scrap of any light and sturdy material you have available to you, trace and cut the rod pocket pattern four times.
 
-![21 - trace rod pocket](https://dototot.com/app/uploads/2015/08/21-trace-rod-pocket.jpg)
+![21 - trace rod pocket](./21-trace-rod-pocket.jpg)
 
-![22 - rod pocket traced 4 times](https://dototot.com/app/uploads/2015/08/22-rod-pocket-traced-4-times.jpg)
+![22 - rod pocket traced 4 times](./22-rod-pocket-traced-4-times.jpg)
 
-With all of the pattern pieces cut out, it’s time to move on to step 2: [sewing and assembling a fox puppet](https://dototot.com/how-to-make-a-puppet-sewing-assembling-a-fox/).
+With all of the pattern pieces cut out, it’s time to move on to step 2: [sewing and assembling a fox puppet](/how-to-make-a-puppet-sewing-assembling-a-fox/).

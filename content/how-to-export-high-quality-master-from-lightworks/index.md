@@ -72,4 +72,4 @@ When you’ve adjusted the options according to your video, run the command and 
 
 ![avconv](./avconv.jpg)
 
-The only downside to the file we just made is that Lightworks won’t be able to import it. If you need to import this file into Lightworks, you’ll need to follow these instructions on [converting videos for importing into Lightworks](https://dototot.com/convert-videos-for-import-into-lightworks-with-avconv/ "Convert Videos For Import Into Lightworks With Avconv").
+The only downside to the file we just made is that Lightworks won’t be able to import it. If you need to import this file into Lightworks, you’ll need to follow these instructions on [converting videos for importing into Lightworks](/convert-videos-for-import-into-lightworks-with-avconv/ "Convert Videos For Import Into Lightworks With Avconv").

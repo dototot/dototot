@@ -6,7 +6,7 @@ image: inkscapecoloring.jpg
 category: "tutorial"
 ---
 
-There are many ways to approach coloring in Inkscape. In this tutorial I’ll show you two methods that I like. Open up you graphic in Inkscape and lets get started. If you don’t have an inked drawing to work with, you might want to read the tutorial on [inking in Inkscape](https://dototot.com/inking-in-inkscape-with-the-calligraphy-and-tweak-tools/ "Inking in Inkscape with the Calligraphy and Tweak Tools") first.
+There are many ways to approach coloring in Inkscape. In this tutorial I’ll show you two methods that I like. Open up you graphic in Inkscape and lets get started. If you don’t have an inked drawing to work with, you might want to read the tutorial on [inking in Inkscape](/inking-in-inkscape-with-the-calligraphy-and-tweak-tools/ "Inking in Inkscape with the Calligraphy and Tweak Tools") first.
 
 Before we start coloring, I recommend grouping all of the lines together. You could do this the way we did before by selecting all of the lines (Ctrl + A) and grouping them (Ctrl + G), but you already know that trick, so lets learn a new one! This time, select all of your lines and choose “Path” then “Union” from the menu at the top. Looks just like grouping, doesn’t it? When we grouped our lines, Inkscape said, “oh! These lines are buddies now, so they should stick together inside of this nice little box I made for them.”
 

@@ -6,7 +6,7 @@ image: 02_mockingbirds.jpg
 category: "tutorial"
 ---
 
-Why do people use Twitter? Attention. Give them what they want with this simple Python Twitter Bot. We’ll be using Python and the excellent Tweepy library to search for tweets by key word and post a reply. If this is new to you, please see our introductory tutorial, [How To Write A Twitter Bot with Python and tweepy](https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/ "How To Write a Twitter Bot with Python and tweepy").
+Why do people use Twitter? Attention. Give them what they want with this simple Python Twitter Bot. We’ll be using Python and the excellent Tweepy library to search for tweets by key word and post a reply. If this is new to you, please see our introductory tutorial, [How To Write A Twitter Bot with Python and tweepy](/how-to-write-a-twitter-bot-with-python-and-tweepy/ "How To Write a Twitter Bot with Python and tweepy").
 
 First, visit [https://dev.twitter.com](https://dev.twitter.com), and create a new application.
 

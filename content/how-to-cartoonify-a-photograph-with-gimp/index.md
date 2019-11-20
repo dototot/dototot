@@ -8,7 +8,7 @@ category: "tutorial"
 
 How do you make an awesome photograph awesomer? Cartoonify it!
 
-In this tutorial we’re going to learn how to make a cartoon from a photograph using GIMP. If you want to follow along, you can download [this](./guidoProfile.jpg "this") picture of Guido. It’s the image we created in our tutorial [How To Fix A Digital Photograph in GIMP Using Rotation, Crop and the Unsharp Mask](https://dototot.com/fixing-a-digital-photo-in-gimp-rotation-cropping-and-the-unsharp-mask/ "How To Fix A Digital Photograph in GIMP Using Rotation, Crop and the Unsharp Mask"). You should check it out if you haven’t already.
+In this tutorial we’re going to learn how to make a cartoon from a photograph using GIMP. If you want to follow along, you can download [this](./guidoProfile.jpg "this") picture of Guido. It’s the image we created in our tutorial [How To Fix A Digital Photograph in GIMP Using Rotation, Crop and the Unsharp Mask](/fixing-a-digital-photo-in-gimp-rotation-cropping-and-the-unsharp-mask/ "How To Fix A Digital Photograph in GIMP Using Rotation, Crop and the Unsharp Mask"). You should check it out if you haven’t already.
 
 Let’s get started. Open your image in GIMP and follow these four quick and easy steps:
 

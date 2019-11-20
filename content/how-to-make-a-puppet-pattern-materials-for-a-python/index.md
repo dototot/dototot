@@ -145,4 +145,4 @@ Then trace and cut two teeth from the stiffened felt. We will trim them into tri
 
 ![Python Puppet Tutorial Materials and Pattern](./puppet_tutorial_python_043.jpg)
 
-You can easily see how the pieces fit together. Part 2 of our tutorial will demonstrate how to [sew and assemble your Python puppet](https://dototot.com/how-to-make-a-puppet-sewing-and-assembling-a-python/).
+You can easily see how the pieces fit together. Part 2 of our tutorial will demonstrate how to [sew and assemble your Python puppet](/how-to-make-a-puppet-sewing-and-assembling-a-python/).

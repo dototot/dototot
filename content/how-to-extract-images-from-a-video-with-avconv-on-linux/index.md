@@ -6,7 +6,7 @@ image: 20150517_howto_avconv_extract_video_gremlin.png
 category: "tutorial"
 ---
 
-Suppose you’ve got an awesome video that nobody is watching and you want to create animated GIFs from excerpts of it so that people are forced to see your genius in action. But how do you extract images from a video? You’re in luck! Using the super-powerful avconv on Linux, you can quickly and easily break a video down frame by frame. If you follow our tutorial [How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line](https://dototot.com/how-to-create-animated-gifs-from-a-png-sequence-with-imagemagick-and-the-command-line/), you can quickly and easily convert your PNG image sequence to an animated GIF.
+Suppose you’ve got an awesome video that nobody is watching and you want to create animated GIFs from excerpts of it so that people are forced to see your genius in action. But how do you extract images from a video? You’re in luck! Using the super-powerful avconv on Linux, you can quickly and easily break a video down frame by frame. If you follow our tutorial [How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line](/how-to-create-animated-gifs-from-a-png-sequence-with-imagemagick-and-the-command-line/), you can quickly and easily convert your PNG image sequence to an animated GIF.
 
 <div class="video">
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="arve-iframe fitvidsignore" frameborder="0" name="" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/CPNueiAMBvc?iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;autohide=1&amp;playsinline=1&amp;autoplay=0" width="480" height="270"></iframe>
@@ -44,6 +44,6 @@ This returns a much more manageable image sequence and takes much less time to c
 man avoncv
 ```
 
-Follow the directions in our tutorial [How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line](https://dototot.com/how-to-create-animated-gifs-from-a-png-sequence-with-imagemagick-and-the-command-line/) to compile your extracted video frames into a miniature masterpiece, like this:
+Follow the directions in our tutorial [How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line](/how-to-create-animated-gifs-from-a-png-sequence-with-imagemagick-and-the-command-line/) to compile your extracted video frames into a miniature masterpiece, like this:
 
 ![Gremlin GIF](./gremlin.gif)

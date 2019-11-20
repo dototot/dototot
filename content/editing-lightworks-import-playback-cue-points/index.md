@@ -6,11 +6,11 @@ image: Selection_011.jpg
 category: "tutorial"
 ---
 
-Now that you know [how to set up a project in Lightworks](https://dototot.com/setting-up-your-first-lightworks-project/ "Setting Up Your First Lightworks Project"), I’m sure you are dying to edit something, so lets jump right into this. Throughout this tutorial, I’m going to be editing the “[Path to Adventure](https://www.thehelloworldprogram.com/linux/path-adventure/)” episode. Follow along by downloading the assets linked below (right click the link and choose save as).
+Now that you know [how to set up a project in Lightworks](/setting-up-your-first-lightworks-project/ "Setting Up Your First Lightworks Project"), I’m sure you are dying to edit something, so lets jump right into this. Throughout this tutorial, I’m going to be editing the “[Path to Adventure](https://www.thehelloworldprogram.com/linux/path-adventure/)” episode. Follow along by downloading the assets linked below (right click the link and choose save as).
 
 [Path To Adventure Video Assets](./path_to_adventure_video.tar.gz).
 
-Create a new 30 fps project and import the three video files. I’ve already converted them to a Lightworks preferred format, so despite what I’ve said before, you can import them with the “Copy Local” or “Create Link” option instead of transcoding them. Create a bin for your footage, a bin for you edits, and a rack for your bins. Then import the footage and drop it in your footage bin. You do remember [how to do all of that](https://dototot.com/setting-up-your-first-lightworks-project/ "Setting Up Your First Lightworks Project"), right?
+Create a new 30 fps project and import the three video files. I’ve already converted them to a Lightworks preferred format, so despite what I’ve said before, you can import them with the “Copy Local” or “Create Link” option instead of transcoding them. Create a bin for your footage, a bin for you edits, and a rack for your bins. Then import the footage and drop it in your footage bin. You do remember [how to do all of that](/setting-up-your-first-lightworks-project/ "Setting Up Your First Lightworks Project"), right?
 
 ![Lightworks bins and racks](./Selection_001.jpg)
 
@@ -26,7 +26,7 @@ In order to share these assets with you online, I had to compress them significa
 
 ![set project video format](./Selection_004.jpg)
 
-[Video formats](https://dototot.com/a-brief-primer-on-video-formats/ "A Brief Primer on Video Formats") are outside the scope of this tutorial, but suffice it to say that “NTSC 16:9” means the video is widescreen and measures 720 pixels wide and 480 pixels tall.
+[Video formats](/a-brief-primer-on-video-formats/ "A Brief Primer on Video Formats") are outside the scope of this tutorial, but suffice it to say that “NTSC 16:9” means the video is widescreen and measures 720 pixels wide and 480 pixels tall.
 
 We’re all set up and ready to begin, so create a new edit and give it a name. Finally we get to the fun stuff! Sort of. Before editing, it’s always a good idea to review your footage. To do this, double click on any of the files to open a source monitor. You can tell the difference between a source monitor and the destination monitor by the colored outline. Blue highlighted windows are source monitors, and the red highlighted monitor is the destination.
 

@@ -40,8 +40,8 @@ GIMP ([www](https://www.gimp.org/)[.](https://www.gimp.org/)[gimp](https://www.g
 
 If you are a RAW photographer, you’ll be happy to know there are several great FOSS tools for editing RAW images. Darktable ([www](https://www.darktable.org/)[.](https://www.darktable.org/)[darktable](https://www.darktable.org/)[.](https://www.darktable.org/)[org](https://www.darktable.org/)) can be a bit confusing at first, but is loaded with features and even supports remote shooting. It is available for Linux and Mac. Windows users may try Rawtherapee as an alternative ([www](https://www.rawtherapee.com/)[.](https://www.rawtherapee.com/)[rawtherapee](https://www.rawtherapee.com/)[.](https://www.rawtherapee.com/)[com](https://www.rawtherapee.com/)).
 
-- [How to fix a digital image with GIMP](https://dototot.com/fixing-a-digital-photo-in-gimp-rotation-cropping-and-the-unsharp-mask/)
-- [How to cartoonify a photograph](https://dototot.com/how-to-cartoonify-a-photograph-with-gimp/)
+- [How to fix a digital image with GIMP](/fixing-a-digital-photo-in-gimp-rotation-cropping-and-the-unsharp-mask/)
+- [How to cartoonify a photograph](/how-to-cartoonify-a-photograph-with-gimp/)
 
 ![dototot glamour shots](./dototot-glamour-shots.jpg)
 
@@ -49,8 +49,8 @@ If you are a RAW photographer, you’ll be happy to know there are several great
 
 Stop motion animation, sometimes called clay animation, is the process of animating physical objects by changing their pose between each frame. It’s a decidedly niche art form, so it should come as no surprise that there aren’t any professional-grade stop motion animation suites that are free and open source. It is possible to hack together your own stop motion studio with a handful of free and open source tools. Because the illusion of motion is created by playing a series of still photos in rapid succession, all we need is a method for capturing images from a camera connected to a computer and a way to compile those images into a video. Usually DSLR cameras ship with remote-shooting software for Windows and Mac, but Linux users get to use the excellent FOSS application Entangle ([www](https://www.entangle-photo.org/)[.](https://www.entangle-photo.org/)[entangle](https://www.entangle-photo.org/)[–](https://www.entangle-photo.org/)[photo](https://www.entangle-photo.org/)[.](https://www.entangle-photo.org/)[org](https://www.entangle-photo.org/)). Using GIMP to determine how to crop the resultant images, the video can then be compiled with avconv.
 
-- [Create stop motion animations with Entangle and avconv](https://dototot.com/create-stop-motion-animations-linux-entangle-avconv/)
-- [How to compile a stop motion animation sequence](https://dototot.com/compile-stop-motion-animation-image-sequence-avconv/)
+- [Create stop motion animations with Entangle and avconv](/create-stop-motion-animations-linux-entangle-avconv/)
+- [How to compile a stop motion animation sequence](/compile-stop-motion-animation-image-sequence-avconv/)
 
 <div class="video">
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="arve-iframe fitvidsignore" frameborder="0" name="" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/-OHaDnuP1nM?iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;autohide=1&amp;playsinline=1&amp;autoplay=0" width="480" height="270"></iframe>
@@ -60,7 +60,7 @@ Stop motion animation, sometimes called clay animation, is the process of animat
 
 Much like stop-motion animation, traditional 2D animation creates the illusion of motion by staging each frame of a scene. While the final product is usually a conglomeration of transparent layers called cels, most animations begin as a rough pencil test, in which each frame of the animation is roughly sketched by hand. With nothing more than a scanner and a stack of printer paper, you can very easily create pencil test animations and compile them with avconv.
 
-- [Transform your scanner into an animation studio](https://dototot.com/transform-scanner-animation-studio/)
+- [Transform your scanner into an animation studio](/transform-scanner-animation-studio/)
 
 ![quickfox](./quickfox.gif)
 
@@ -78,7 +78,7 @@ Digital 2D animation software eliminates the need to create animations frame-by-
 
 Blender ([www](https://www.blender.og/)[.](https://www.blender.og/)[blender](https://www.blender.og/)[.](https://www.blender.og/)[org](https://www.blender.org/)) is a remarkably powerful, free and open-source 3D modeling and animation program. It can also be used as a video editor and compositor, and even comes equipped with its own game engine. It rivals proprietary 3D animation applications in terms of capabilities, but has a notoriously steep learning curve.
 
-- [How to learn blender cycles](https://dototot.com/how-to-learn-blender-cycles/)
+- [How to learn blender cycles](/how-to-learn-blender-cycles/)
 
 <div class="video">
 <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="arve-iframe fitvidsignore" frameborder="0" name="" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" scrolling="no" src="https://www.youtube-nocookie.com/embed/Xv-AKthJnJA?iv_load_policy=3&amp;modestbranding=1&amp;rel=0&amp;autohide=1&amp;playsinline=1&amp;autoplay=0" width="480" height="270"></iframe>
@@ -88,8 +88,8 @@ Blender ([www](https://www.blender.og/)[.](https://www.blender.og/)[blender](htt
 
 For all your video and audio conversion needs, look no further than avconv ([www](https://www.libav.org/)[.](https://www.libav.org/)[libav](https://www.libav.org/)[.](https://www.libav.org/)[org](https://www.libav.org/)). This powerful command-line utility runs on Windows, Mac, and Linux, and can be used to quickly batch convert videos and image sequences to a wide variety of codecs. There are GUI front-ends for avconv, but the command line syntax is not hard to learn, and you will come to appreciate the amount of control it offers.
 
-- [How to Trim Videos with the Command Line Using AVConv](https://dototot.com/how-to-trim-videos-with-the-command-line-using-avconv/)
-- [How To Extract Images from a Video with avconv on Linux](https://dototot.com/how-to-extract-images-from-a-video-with-avconv-on-linux/)
+- [How to Trim Videos with the Command Line Using AVConv](/how-to-trim-videos-with-the-command-line-using-avconv/)
+- [How To Extract Images from a Video with avconv on Linux](/how-to-extract-images-from-a-video-with-avconv-on-linux/)
 
 ```bash
 avconv -i input.mov -c:v libx264 -crf 18 -c:a libvorbis -q:a 10 output.mkv
@@ -99,8 +99,8 @@ avconv -i input.mov -c:v libx264 -crf 18 -c:a libvorbis -q:a 10 output.mkv
 
 Imagemagick ([www](https://www.imagemagick.org/)[.](https://www.imagemagick.org/)[imagemagick](https://www.imagemagick.org/)[.](https://www.imagemagick.org/)[org](https://www.imagemagick.org/)) is for still images what the aforementioned avconv is for video. This cross-platform command-line interface can convert images to numerous formats, perform batch operations, and even output animated gifs. The command-line syntax is intuitive, but the amount of options can be overwhelming at first.
 
-- [How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line](https://dototot.com/how-to-create-animated-gifs-from-a-png-sequence-with-imagemagick-and-the-command-line/)
-- [ImageMagick Tutorial: How To Batch Resize Images on the Command Line](https://dototot.com/imagemagick-tutorial-batch-resize-images-command-line/)
+- [How To Create Animated GIFs from a PNG Sequence with ImageMagick and the Command Line](/how-to-create-animated-gifs-from-a-png-sequence-with-imagemagick-and-the-command-line/)
+- [ImageMagick Tutorial: How To Batch Resize Images on the Command Line](/imagemagick-tutorial-batch-resize-images-command-line/)
 
 ```bash
 convert -delay 2 -loop 0 *.png -scale 650 out.gif
@@ -116,9 +116,9 @@ Digital music production can become incredibly complicated with Ardour, so check
 
 Lightworks ([www](https://www.lwks.com/)[.](https://www.lwks.com/)[lwks](https://www.lwks.com/)[.](https://www.lwks.com/)[com](https://www.lwks.com/)), the academy and emmy award-winning video editor, is professional-grade freemium software available for Windows, Mac, and Linux. The free version is nearly the same as the pro version, but with severe limitations on the exporter. Lightworks is supposedly on track to become free and also open source, but EditShare has yet to live up to that promise. Windows and Mac users may want to try Davinci Resolve ([www](https://www.blackmagicdesign.com/)[.](https://www.blackmagicdesign.com/)[blackmagicdesign](https://www.blackmagicdesign.com/)[.](https://www.blackmagicdesign.com/)[com](https://www.blackmagicdesign.com/)) as an alternative. There are a number of free and open source video editors on Linux, but none of them offer the necessary features to make them viable competition. Kdenlive, Flowblade, and Pitivi are promising up-and-comers to keep an eye on.
 
-- [Lightworks Video Editing: Import, Playback, and Cue Points](https://dototot.com/editing-lightworks-import-playback-cue-points/)
-- [Lightworks Video Editing: Basic Timeline Edits](https://dototot.com/lightworks-editing-basic-timeline-edits/)
-- [Lightworks Video Editing: Advanced Trimming Techniques](https://dototot.com/lightworks-video-editing-advanced-trimming-techniques/)
+- [Lightworks Video Editing: Import, Playback, and Cue Points](/editing-lightworks-import-playback-cue-points/)
+- [Lightworks Video Editing: Basic Timeline Edits](/lightworks-editing-basic-timeline-edits/)
+- [Lightworks Video Editing: Advanced Trimming Techniques](/lightworks-video-editing-advanced-trimming-techniques/)
 
 ## Get Animated!
 

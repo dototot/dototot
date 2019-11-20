@@ -6,7 +6,7 @@ image: inking.jpg
 category: "tutorial"
 ---
 
-Inking is the process of turning a boring old pencil drawing into a luscious black and white cartoon. Traditionally this is done with pen and ink, hence the term inking. We’re going to take inking into the digital realm with Inkscape. You should have an Inkscape document sized to your drawing that has two layers: one for you pencil sketch and a blank one for your outlines. If you don’t have this, you should read the post on [how to set up Inkscape for inking](https://dototot.com/how-to-make-cartoon-drawings-with-inkscape/ "How to Make Cartoon Drawings with Inkscape") before you continue.
+Inking is the process of turning a boring old pencil drawing into a luscious black and white cartoon. Traditionally this is done with pen and ink, hence the term inking. We’re going to take inking into the digital realm with Inkscape. You should have an Inkscape document sized to your drawing that has two layers: one for you pencil sketch and a blank one for your outlines. If you don’t have this, you should read the post on [how to set up Inkscape for inking](/how-to-make-cartoon-drawings-with-inkscape/ "How to Make Cartoon Drawings with Inkscape") before you continue.
 
 There are a few different approaches to inking. For an image with lots of straight lines, you might find it easier to use the pen tool. For more organic images, such as a picture of yourself, the Calligraphy tool will be easier to use and look nicer too. I’m kind of organic, so I’m going to use the calligraphy tool. Click on the calligraphy icon on the left or press Ctrl + F6 to select the tool. A row of options will appear at the top of the program. These determine what our brush strokes will look like. The width changes how thick the lines will be. Even though we want to end up with some chunky lines, the width should be set to three. We will thicken the lines later, so this is a good starting point. Thinning, angle, and fixation change the shape of the brush. You can play with these settings to see what they do, but for inking they should all be set to zero. Tremor and wiggle will do crazy things to your pen strokes. Crank up the settings on these to see what I mean.
 
@@ -50,4 +50,4 @@ When you’ve finished closing the gaps, zoom out and admire your handiwork. Her
 
 ![](./img_09.jpg "Final Inking")
 
-Pretty cool, right? We’re all done with inking, so save your project and treat yourself to a glass of lemonade! If you’d like to add some color to your drawing, you’ll definitely want to read the next step on [coloring in Inkscape](https://dototot.com/coloring-in-inkscape/ "Coloring in Inkscape").
+Pretty cool, right? We’re all done with inking, so save your project and treat yourself to a glass of lemonade! If you’d like to add some color to your drawing, you’ll definitely want to read the next step on [coloring in Inkscape](/coloring-in-inkscape/ "Coloring in Inkscape").
