@@ -6,7 +6,7 @@ image: "dototot_blender_model_animate_robot_146-1.jpg"
 category: "tutorial"
 ---
 
-Your robot is looking good, but that default gray is a bit drab. In this chapter you will learn how to apply Blender materials and shape keys to brighten up your robot. If you’re just joining us, you will want to start with Part 1, [Beginner Blender Tutorial: Modeling and Animating a Robot](https://dototot.com/beginner-blender-tutorial-how-to-model-and-animate-a-robot/).
+Your robot is looking good, but that default gray is a bit drab. In this chapter you will learn how to apply Blender materials and shape keys to brighten up your robot. If you’re just joining us, you will want to start with Part 1, [Beginner Blender Tutorial: Modeling and Animating a Robot](/beginner-blender-tutorial-how-to-model-and-animate-a-robot/).
 
 ## Blender Materials
 

@@ -8,7 +8,7 @@ category: "tutorial"
 
 Let’s bring our robot to life! We will do so with bones. Yes, bones. And bones are what make up armatures. In Blender, rigging is the process of connecting an armature to a mesh to make it move. In this tutorial, you will be rigging Blender armatures to animate your robot.
 
-If you’re just joining us, you will want to start with [Part 1, Beginner Blender Tutorial: How to Model & Animate a Robot.](https://dototot.com/beginner-blender-tutorial-how-to-model-and-animate-a-robot/)
+If you’re just joining us, you will want to start with [Part 1, Beginner Blender Tutorial: How to Model & Animate a Robot.](/beginner-blender-tutorial-how-to-model-and-animate-a-robot/)
 
 ## Rigging Blender Armatures
 
@@ -158,4 +158,4 @@ Grab the HandIKs and move them around to see that everything works properly. The
 
 ![How to Model and Animate a Robot: Rigging Blender Armatures](./dototot_blender_model_animate_robot_197-1.jpg)
 
-In the next chapter, we will [pose and key frame a Blender animation our robot to audio an track](https://dototot.com/how-to-model-and-animate-a-robot-key-frame-a-blender-animation/). Sound good?
+In the next chapter, we will [pose and key frame a Blender animation our robot to audio an track](/how-to-model-and-animate-a-robot-key-frame-a-blender-animation/). Sound good?

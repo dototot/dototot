@@ -121,4 +121,4 @@ Using a scrap of any light and sturdy material you have available to you, trace 
 
 ![22 - rod pocket traced 4 times](./22-rod-pocket-traced-4-times.jpg)
 
-With all of the pattern pieces cut out, it’s time to move on to step 2: [sewing and assembling a fox puppet](https://dototot.com/how-to-make-a-puppet-sewing-assembling-a-fox/).
+With all of the pattern pieces cut out, it’s time to move on to step 2: [sewing and assembling a fox puppet](/how-to-make-a-puppet-sewing-assembling-a-fox/).

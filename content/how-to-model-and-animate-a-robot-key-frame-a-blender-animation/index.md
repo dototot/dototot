@@ -8,7 +8,7 @@ category: "tutorial"
 
 In this chapter, you will learn how to key frame a Blender animation by adding an audio file to your project and syncing your robot’s movements to the sound.
 
-you’re just joining us, you will want to start with [Part 1, Beginner Blender Tutorial: How to Model & Animate a Robot.](https://dototot.com/beginner-blender-tutorial-how-to-model-and-animate-a-robot/)
+you’re just joining us, you will want to start with [Part 1, Beginner Blender Tutorial: How to Model & Animate a Robot.](/beginner-blender-tutorial-how-to-model-and-animate-a-robot/)
 
 ![How to Model and Animate a Robot: Key Frame a Blender Animation](./dototot_blender_model_animate_robot_197-1-1.jpg)  
 ![How to Model and Animate a Robot: Key Frame a Blender Animation](./dototot_blender_model_animate_robot_198-1.jpg)

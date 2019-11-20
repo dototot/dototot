@@ -184,4 +184,4 @@ The last step is to trace and cut the horns from the thicker, white foam.
 
 ![How to Make a Puppet: Pattern & Materials for a Gnu](./puppet_tutorial_gnu_065.jpg)
 
-Part 2 of our tutorial will demonstrate [how to sew and assemble your gnu puppet](https://dototot.com/how-to-make-a-puppet-sewing-and-assembling-a-gnu/).
+Part 2 of our tutorial will demonstrate [how to sew and assemble your gnu puppet](/how-to-make-a-puppet-sewing-and-assembling-a-gnu/).

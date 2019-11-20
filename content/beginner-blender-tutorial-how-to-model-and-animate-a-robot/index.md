@@ -374,4 +374,4 @@ Press **ALT + H** to reveal the hidden faces and press **A** to deselect everyth
 
 ![Beginner Blender Tutorial: How to Model and Animate a Robot](./dototot_blender_model_animate_robot_117-2.jpg)
 
-Hello World! Be sure to save your work, with **CTRL + S**. In [Part 2: Blender Materials and Shape Keys](https://dototot.com/how-to-model-and-animate-a-robot-blender-materials-shape-keys/), we will add color and simple motion to our robot. See you there!
+Hello World! Be sure to save your work, with **CTRL + S**. In [Part 2: Blender Materials and Shape Keys](/how-to-model-and-animate-a-robot-blender-materials-shape-keys/), we will add color and simple motion to our robot. See you there!

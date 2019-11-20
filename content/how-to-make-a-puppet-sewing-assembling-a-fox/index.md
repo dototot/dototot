@@ -6,7 +6,7 @@ image: "63-finished-fox-puppet.jpg"
 category: "puppet pattern"
 ---
 
-This tutorial will teach you how to craft your very own Muppet-style fox puppet. If you are just joining us, head over to part 1 of this tutorial: _[How to Make a Puppet: Pattern & Materials for a Fox](https://dototot.com/how-to-make-a-puppet-pattern-materials-for-a-fox/)_. We will be using a machine for most of the sewing, but you can do it all by hand if you really want to. Sew all of the seams with a 1/4 inch margin. We recommend reading through all of the instructions before you begin, so there are no surprises.
+This tutorial will teach you how to craft your very own Muppet-style fox puppet. If you are just joining us, head over to part 1 of this tutorial: _[How to Make a Puppet: Pattern & Materials for a Fox](/how-to-make-a-puppet-pattern-materials-for-a-fox/)_. We will be using a machine for most of the sewing, but you can do it all by hand if you really want to. Sew all of the seams with a 1/4 inch margin. We recommend reading through all of the instructions before you begin, so there are no surprises.
 
 Ready when you are!
 

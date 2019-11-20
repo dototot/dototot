@@ -8,7 +8,7 @@ category: "puppet pattern"
 
 This tutorial demonstrates the process for sewing and assembling a professional, Muppet-style puppet. If you don’t know how to sew, it’s not hard to learn. If you have access to a machine and a mature individual to teach you, politely insist on lessons. And if you don’t have access to a machine, you can still make this puppet by hand. It will take a little longer but you’ll grow so much during the process.
 
-If you are just joining us, you will want to start with our previous tutorial, [‘How to Make a Puppet: Pattern and Materials for a Penguin’](https://dototot.com/how-to-make-a-puppet-pattern-materials-for-a-penguin/).
+If you are just joining us, you will want to start with our previous tutorial, [‘How to Make a Puppet: Pattern and Materials for a Penguin’](/how-to-make-a-puppet-pattern-materials-for-a-penguin/).
 
 ![puppet_tutorial_penguin_090](./puppet_tutorial_penguin_090.jpg)
 

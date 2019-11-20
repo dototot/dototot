@@ -6,7 +6,7 @@ image: animating2.jpg
 category: "tutorial"
 ---
 
-Now that you’ve [captured all of your stop motion animation frames with Entangle](https://dototot.com/create-stop-motion-animations-linux-entangle-avconv/ "Create Stop Motion Animations on Linux with Entangle and avconv"), it’s time to compile your images into a video. You should have a folder located at ~Pictures/capture that is chock full of images labeled “capturexxxxxx.jpg”. This is perfectly formatted for feeding an image sequence into avconv, but remember we made mistakes and deleted files along the way, so there are gaps in our image sequence. We’ll need to install a bulk rename utility like pyRenamer to correct them.
+Now that you’ve [captured all of your stop motion animation frames with Entangle](/create-stop-motion-animations-linux-entangle-avconv/ "Create Stop Motion Animations on Linux with Entangle and avconv"), it’s time to compile your images into a video. You should have a folder located at ~Pictures/capture that is chock full of images labeled “capturexxxxxx.jpg”. This is perfectly formatted for feeding an image sequence into avconv, but remember we made mistakes and deleted files along the way, so there are gaps in our image sequence. We’ll need to install a bulk rename utility like pyRenamer to correct them.
 
 ```bash
 sudo apt-get install pyrenamer

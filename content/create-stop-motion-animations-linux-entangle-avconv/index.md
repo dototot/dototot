@@ -67,4 +67,4 @@ Making small adjustments to your model, capture each frame of the video one afte
 
 If you make a mistake, like I just did, you can right click on the thumbnail and select delete. The only problem with this is that entangle won’t adjust the names of your other files to accommodate the missing frame. This will be a problem when we compile our video, but don’t worry about it for now. Continue on as though everything is perfectly okay.
 
-When you are satisfied with your animation (or tired of working on it), you may move on to [compiling your animation with avconv](https://dototot.com/compile-stop-motion-animation-image-sequence-avconv/ "How to Compile a Stop Motion Animation Image Sequence with avconv").
+When you are satisfied with your animation (or tired of working on it), you may move on to [compiling your animation with avconv](/compile-stop-motion-animation-image-sequence-avconv/ "How to Compile a Stop Motion Animation Image Sequence with avconv").

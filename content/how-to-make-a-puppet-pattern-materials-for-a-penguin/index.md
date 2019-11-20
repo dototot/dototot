@@ -218,4 +218,4 @@ Lastly, trace and cut the eyes from the foam sheets.
 
 ![How to Make a Puppet: Pattern & Materials for a Penguin](./puppet_tutorial_penguin_089.jpg)
 
-You can easily see how the pieces fit together. Part 2 of our tutorial will demonstrate [how to sew and assemble your penguin puppet](https://dototot.com/how-to-make-a-puppet-sewing-and-assembling-a-penguin/).
+You can easily see how the pieces fit together. Part 2 of our tutorial will demonstrate [how to sew and assemble your penguin puppet](/how-to-make-a-puppet-sewing-and-assembling-a-penguin/).
