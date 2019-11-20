@@ -9,6 +9,10 @@
   & article > *:last-child {
     margin-bottom: 0;
   }
+
+  & p {
+    text-align: justify;
+  }
 }
 
 @media (--small-viewport) {

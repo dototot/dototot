@@ -41,6 +41,7 @@
   margin-bottom: var(--column-gap);
   padding-bottom: var(--column-gap);
   border-bottom: 1px solid var(--color-blue-lightest);
+  text-align: justify;
 
   & > *:last-child {
     margin-bottom: 0;

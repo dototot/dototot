@@ -9,7 +9,7 @@ import PuppetPatterns from "../components/PuppetPatterns"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Dototot" />
+    <SEO title="Engaging Education" />
     <Hero />
     <SectionHeading>
       Learn computer science, programming, and web development with your

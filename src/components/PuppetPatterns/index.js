@@ -39,16 +39,40 @@ const PuppetPatterns = () => {
   return (
     <div className={css.puppetPatterns}>
       <div>
-        <Img fluid={data.pythonImg.childImageSharp.fluid} />
+        <a
+          href="https://gumroad.com/l/python-puppet"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Img fluid={data.pythonImg.childImageSharp.fluid} />
+        </a>
       </div>
       <div>
-        <Img fluid={data.penguinImg.childImageSharp.fluid} />
+        <a
+          href="https://gumroad.com/l/penguin-puppet"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Img fluid={data.penguinImg.childImageSharp.fluid} />
+        </a>
       </div>
       <div>
-        <Img fluid={data.gnuImg.childImageSharp.fluid} />
+        <a
+          href="https://gumroad.com/l/gnu-puppet"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Img fluid={data.gnuImg.childImageSharp.fluid} />
+        </a>
       </div>
       <div>
-        <Img fluid={data.foxImg.childImageSharp.fluid} />
+        <a
+          href="https://gumroad.com/l/fox-puppet"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Img fluid={data.foxImg.childImageSharp.fluid} />
+        </a>
       </div>
     </div>
   )

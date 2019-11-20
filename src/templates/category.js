@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Dototot" />
+    <SEO title="Post Archive" />
     <PostGrid edges={data.allMarkdownRemark.edges} />
   </Layout>
 )

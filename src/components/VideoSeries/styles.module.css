@@ -3,9 +3,22 @@
   grid-template-columns: 1fr;
   grid-gap: var(--column-gap);
 
+  & h3 span {
+    background: var(--color-red);
+    border-radius: 0.2rem;
+    color: var(--color-white);
+    padding: 0.15rem 0.25rem;
+    font-size: 0.5em;
+    font-weight: 700;
+    vertical-align: super;
+    margin-left: 0.25rem;
+  }
+
   & p {
     text-align: justify;
-    margin: 0;
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 

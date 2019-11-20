@@ -2,14 +2,15 @@ import React from "react"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import SectionHeading from '../components/SectionHeading'
-import PuppetPatterns from "../components/PuppetPatterns";
+import SEO from "../components/seo"
+import PuppetPatterns from "../components/PuppetPatterns"
 import css from "./blog-post.module.css"
 
 function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <article>
         <header className={css.header}>
           <Img
@@ -26,7 +27,10 @@ function BlogPost({ data }) {
             </ul>
           </div>
         </header>
-        <div className={css.postContent} dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          className={css.postContent}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <PuppetPatterns />
       </article>
     </Layout>

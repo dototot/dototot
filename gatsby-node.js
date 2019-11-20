@@ -2,7 +2,35 @@ const path = require("path")
 const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  const redirects = [
+    {
+      from: "/python-puppet",
+      to: "/how-to-make-a-puppet-pattern-materials-for-a-python",
+    },
+    {
+      from: "/fox-puppet",
+      to: "/how-to-make-a-puppet-pattern-materials-for-a-fox",
+    },
+    {
+      from: "/penguin-puppet",
+      to: "/how-to-make-a-puppet-pattern-materials-for-a-penguin",
+    },
+    {
+      from: "/gnu-puppet",
+      to: "/how-to-make-a-puppet-pattern-materials-for-a-gnu",
+    },
+  ]
+
+  redirects.forEach(redirect => {
+    createRedirect({
+      fromPath: redirect.from,
+      isPermanent: true,
+      redirectInBrowser: true,
+      toPath: redirect.to,
+    })
+  })
 
   return new Promise((resolve, reject) => {
     resolve(
