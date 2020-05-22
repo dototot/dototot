@@ -1,6 +1,6 @@
 ---
 title: Three Undeniable Reasons to Use Free, Open Source Software
-date: "2014-05-22"
+date: "2013-07-15"
 author: "Jared Nielsen"
 category: "et cetera"
 image: 20130715_whyOpenSource1.jpg
