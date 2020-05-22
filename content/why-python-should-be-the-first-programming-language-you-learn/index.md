@@ -14,7 +14,7 @@ Besides being awesome, Python should be your first programming language because 
 
 Python is easy to learn. The learning curve is very gradual. Other languages can be quite steep. With Python and the proper combination of ambition and attention, you could whip together a game in a day knowing nothing before you started. As I mentioned above, Python places an emphasis on readability. Here’s an example of how easy and readable Python is. The first code example below is written in C++:
 
-```c++
+```cpp
 #include stdout
 
 int main()
