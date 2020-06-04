@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/`,
   siteMetadata: {
     title: `Dototot`,
     description: `Engaging Education`,
@@ -15,7 +16,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-plugin-sharp',
+      resolve: "gatsby-plugin-sharp",
       options: {
         defaultQuality: 80,
       },
@@ -56,7 +57,7 @@ module.exports = {
               tracedSVG: true,
               maxWidth: 960,
               linkImagesToOriginal: false,
-              quality: 80
+              quality: 80,
             },
           },
         ],
