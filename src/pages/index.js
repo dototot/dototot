@@ -12,15 +12,15 @@ const IndexPage = () => (
     <SEO title="Engaging Education" />
     <Hero />
     <SectionHeading>
-      Learn computer science, programming, and web development with your
-      educational <em>super friends</em>.
-    </SectionHeading>
-    <VideoSeries />
-    <SectionHeading>
       Craft your own fleece and foam character with our complete, ready-to-print
       puppet patterns.
     </SectionHeading>
     <PuppetPatterns />
+    <SectionHeading>
+      Learn computer science, programming, and web development with your
+      educational <em>super friends</em>.
+    </SectionHeading>
+    <VideoSeries />
   </Layout>
 )
 
